@@ -11,5 +11,5 @@ aviation_courses = {}
 business_courses = {}
 
 
-
+example_commit = str("")
 
