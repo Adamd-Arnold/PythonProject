@@ -1,93 +1,87 @@
 ## Course Catalogue in Python Using Dictionaries
 
-accounting_courses = {"ACC 201": "Financial Accounting", "ACC 202": "Managerial Accounting", "ACC 310": "Intermediate Accounting I", "ACC 311": "Intermediate Accounting II", "ACC 420": "Auditing"}
+accounting_courses = {"ACCT760": "Advanced Managerial Accounting", "ACCT650": "Adv Managerial Acct & Fin Modeling", "ACCT680": "Financial Decision-making", "ACCT620": "Advanced Managerial Accounting", "ACCT201": "Principles of Accounting I"}
 
-anthropology_courses = {"ANT 101": "Introduction to Anthropology", "ANT 220": "Cultural Anthropology", "ANT 230": "Archaeology", "ANT 320": "Biological Anthropology", "ANT 410": "Anthropological Theory"}
+art_courses = {"ART102": "2D Art Foundations", "ART103": "3D Art Foundations", "ART107": "Drawing I", "ART115TI": "Visual Media Foundations", "ART202": "Illustration Methods"}
 
-art_courses = {"ART 101": "Introduction to Art", "ART 120": "Drawing I", "ART 220": "Painting I", "ART 320": "Graphic Design", "ART 410": "Portfolio Development"}
+aviation_courses = {"AVM301": "Aviation History & Developmnt", "AVM302": "Aviation Economics", "AVM303RI": "Intro Unmanned Aircraft Systems", "AVM306": "Airport Planning & Management", "AVM311": "Airline Management"}
 
-aviation_courses = {"AVI 101": "Introduction to Aviation", "AVI 120": "Private Pilot Ground School", "AVI 230": "Instrument Flight Theory", "AVI 310": "Aviation Safety", "AVI 360": "Air Traffic Systems"}
+biology_courses = {"BIOL100": "Principles of Biology", "BIOL180": "Biological Diversity", "BIOL190": "Biological Unity", "BIOL215": "Human Anatomy & Physiology I", "BIOL222": "Microbiology for Health Professionals"}
 
-biology_courses = {"BIO 110": "Principles of Biology I", "BIO 111": "Principles of Biology II", "BIO 220": "Genetics", "BIO 330": "Microbiology", "BIO 410": "Ecology"}
+business_courses = {"BUS102": "Business Scholars I", "BUS202": "Business Scholars II", "BUS302": "Business Scholars II", "BUS390": "Internship in Business", "BUS402": "Business Scholars IV"}
 
-business_courses = {"BUS 101": "Introduction to Business", "ACC 201": "Financial Accounting", "ECO 201": "Microeconomics", "MKT 301": "Principles of Marketing", "FIN 320": "Corporate Finance"}
+chemistry_courses = {"CHEM101": "Introductory College Chemistry", "CHEM101H": "Honors: Introductory College Chemistry", "CHEM120": "Urban Environmental Issues", "CHEM204": "General Chemistry I", "CHEM204H": "Hon General Chemistry I"}
 
-chemistry_courses = {"CHM 101": "General Chemistry I", "CHM 102": "General Chemistry II", "CHM 220": "Organic Chemistry I", "CHM 221": "Organic Chemistry II", "CHM 330": "Analytical Chemistry"}
+communication_courses = {"COMM395": "Communication Practicum 1–3", "COMM401": "Communicating to Diverse Publics", "COMM201SI": "Introduction to Public Speaking", "COMM207WI": "Online Newswriting", "COMM332WI": "Social Media: Writing"}
 
-civil_engineering_courses = {"CE 201": "Statics and Strength of Materials", "CE 220": "Surveying", "CE 310": "Structural Analysis", "CE 320": "Geotechnical Engineering", "CE 410": "Transportation Engineering"}
+computer_science_courses = {"CS102": "Introduction of Computational Thinking", "CS150": "Personal Productivity Using Technology", "CS155": "Foundations of Computer Science", "CS158": "Fundamentals of Programming", "CS199": "Introduction to Special Topics in Computing Science"}
 
-communication_courses = {"COM 101": "Public Speaking", "COM 210": "Interpersonal Communication", "COM 230": "Mass Media and Society", "COM 320": "Organizational Communication", "COM 350": "Digital Media Production"}
+criminal_justice_courses = {"LAW707": "Criminal Law and Procedure I", "LAW717": "Criminal Law and Procedure II", "LAW742": "Advanced Criminal Procedure", "SOC305": "Criminology", "SOC320": "Green Criminology"}
 
-computer_science_courses = {"CS 110": "Introduction to Programming", "CS 220": "Data Structures", "CS 230": "Computer Organization", "CS 310": "Algorithms", "CS 340": "Database Systems"}
+cybersecurity_courses = {"CS341": "Introduction to Cybersecurity", "CS345SI": "Network Security", "CS449": "Digital Forensics", "CS601": "Foundations of Cybersecurity", "CS610": "Cyber Threat Intelligence"}
 
-criminal_justice_courses = {"CRJ 101": "Introduction to Criminal Justice", "CRJ 210": "Criminology", "CRJ 230": "Policing in America", "CRJ 320": "Corrections", "CRJ 410": "Criminal Law"}
+data_science_courses = {"DSIM602": "Introduction to Applied Business Analytics", "DSIM606": "Data Mining and Predictive Analytics", "DSIM307": "Introduction to Business Analytics", "MATH270": "Introduction to Data Science", "MATH170TI": "Data Science Foundations"}
 
-cybersecurity_courses = {"CYB 210": "Introduction to Cybersecurity", "CYB 220": "Network Security", "CYB 310": "Ethical Hacking", "CYB 320": "Digital Forensics", "CYB 410": "Security Operations"}
+economics_courses = {"ECON201": "Principles of Macroeconomics", "ECON202": "Principles of Microeconomics", "ECON211": "Quantitative Methods Soc Sci", "ECON310": "Money & Banking", "ECON340": "Sports Economics"}
 
-data_science_courses = {"DS 201": "Introduction to Data Science", "DS 220": "Data Wrangling", "DS 310": "Machine Learning", "DS 320": "Data Visualization", "DS 410": "Applied Data Science Capstone"}
+education_courses = {"EDU102": "Human Development & Learning", "EDU103": "PM 1 - Intro Found in Educatn", "EDU248": "ESOL 2 - Methods of Teaching", "EDU287": "Special Topics in Edu", "EDU312SI": "Intro to Civic Engagement"}
 
-economics_courses = {"ECO 201": "Microeconomics", "ECO 202": "Macroeconomics", "ECO 310": "Intermediate Microeconomics", "ECO 311": "Intermediate Macroeconomics", "ECO 420": "Econometrics"}
+electrical_engineering_courses = {"EE221": "Digital I", "EE331": "Electronic Power System Dsgn", "EE222": "Analog I", "EE322": "Analog II", "EE311": "Linear Systems Design"}
 
-education_courses = {"EDU 200": "Foundations of Education", "EDU 240": "Educational Psychology", "EDU 300": "Classroom Management", "EDU 330": "Assessment and Instruction", "EDU 410": "Student Teaching Seminar"}
+engineering_courses = {"ENGR111": "Freshmen Design", "ENGR151": "Applied Physics for Engineering Design I", "ENGR151L": "Applied Physics for Engineering Lab", "ENGR152": "App Physics for Engineering Design II", "ENGR152L": "Engineering Physics II Lab"}
 
-electrical_engineering_courses = {"EE 201": "Circuit Analysis", "EE 220": "Digital Logic", "EE 310": "Electronics I", "EE 320": "Signals and Systems", "EE 410": "Control Systems"}
+english_courses = {"ENGL101": "Elements of Composition", "ENGL103": "Introductory Writing", "ENGL103H": "Hon: Introductory Writing", "ENGL189": "Southern Women Writers", "ENGL200": "Aquarian Practicum"}
 
-engineering_courses = {"ENGR 101": "Introduction to Engineering", "ENGR 201": "Statics", "ENGR 220": "Dynamics", "ENGR 250": "Thermodynamics", "ENGR 310": "Circuits"}
+entrepreneurship_courses = {"ENT480": "Special Topics in Entrepreneurship", "ENT482": "Managing Growing Enterprise"}
 
-english_courses = {"ENG 101": "English Composition I", "ENG 102": "English Composition II", "ENG 220": "Introduction to Literature", "ENG 320": "American Literature", "ENG 410": "Advanced Writing"}
+environmental_science_courses = {"ENV101": "Intro to Environmental Studies"}
 
-entrepreneurship_courses = {"ENT 301": "Introduction to Entrepreneurship", "ENT 320": "New Venture Creation", "ENT 330": "Entrepreneurial Finance", "ENT 410": "Innovation Management", "ENT 420": "Business Plan Development"}
+exercise_science_courses = {"EXSC101": "Intro to Exercise Science", "EXSC180": "Wingshooting I; Beginning", "EXSC181": "Wingshooting Ii; Intermediate", "EXSC182": "Wingshooting Iii; Advanced", "EXSC305": "Principles of Group Exercise"}
 
-environmental_science_courses = {"ENV 101": "Introduction to Environmental Science", "ENV 220": "Environmental Chemistry", "ENV 240": "Conservation Biology", "ENV 320": "Climate Change Science", "ENV 410": "Environmental Policy"}
+finance_courses = {"FIN750": "Corporate Mergers Acquisitions Valuation", "FIN610": "Practicum in Portfolio Management", "FIN612": "Investment Management", "FIN587": "ST/Portfolio Management Capstone", "FIN301": "Corporate Finance"}
 
-exercise_science_courses = {"EXS 101": "Introduction to Exercise Science", "EXS 220": "Kinesiology", "EXS 230": "Exercise Physiology", "EXS 320": "Biomechanics", "EXS 410": "Strength and Conditioning"}
+general_courses = {"ENGL101": "Elements of Composition", "MATH104": "College Algebra", "HIST150": "The Modern World", "BIOL100": "Principles of Biology", "PHIL101": "Introduction to Philosophy"}
 
-finance_courses = {"FIN 301": "Principles of Finance", "FIN 320": "Corporate Finance", "FIN 330": "Investments", "FIN 410": "Financial Markets", "FIN 420": "International Finance"}
+healthcare_administration_courses = {"NUR670": "Leadership and Health Policy", "HLSC301": "Epidemiology in Health Science", "HLSC412": "Public Health", "MSHI524": "Public/Population Health Informatics", "NUR630": "Epidemiology and Biostatistics"}
 
-general_courses = {"ENG 101": "English Composition I", "MAT 103": "College Algebra", "BIO 100": "General Biology", "HIS 201": "U.S. History", "PSY 101": "Introduction to Psychology"}
+history_courses = {"HIST150": "The Modern World", "HIST206": "History of the United States to", "HIST207": "History of the United States From", "HIST300": "History of Sports", "HIST350": "Special Topics in History"}
 
-healthcare_administration_courses = {"HCA 201": "Introduction to Healthcare Administration", "HCA 220": "Healthcare Systems", "HCA 310": "Healthcare Finance", "HCA 320": "Healthcare Law and Ethics", "HCA 410": "Healthcare Operations"}
+information_technology_courses = {"ACCT370": "Accounting Information Systems", "CS330": "Networks & Wireless Communications", "CS600": "Network and Wireless Communications", "CS345SI": "Network Security", "CS380": "Web Programming"}
 
-history_courses = {"HIS 101": "World History I", "HIS 102": "World History II", "HIS 201": "U.S. History", "HIS 320": "Modern Europe", "HIS 410": "Historical Research Methods"}
+international_business_courses = {"INB555": "Competing in the Global Economy", "INB341": "International Marketing", "INB410": "Economics of Globalization", "MGT545": "Global Corporate Strategy and Policy", "POL208": "International Politics"}
 
-information_technology_courses = {"IT 101": "Introduction to Information Technology", "IT 210": "Networking Fundamentals", "IT 220": "Systems Administration", "IT 320": "Cloud Computing", "IT 410": "IT Project Management"}
+management_courses = {"MGT715": "Entrepreneurial Behavior in Organizations", "MGT736": "Strategic Leadership", "MGT566": "Legal & Ethical Environment of Business", "MGT610": "Strategic Human Resource Management", "MGT620": "Responsible Leadership"}
 
-international_business_courses = {"IBU 301": "International Business", "IBU 320": "Global Supply Chain", "IBU 330": "Cross-Cultural Management", "IBU 410": "Global Strategy", "IBU 420": "International Trade"}
+marine_science_courses = {"MSC111": "Introduction to Oceanography", "MSC112": "Introduction Oceanography Lab", "MSC113": "Intro to Marine Biology", "MSC114": "Intro to Marine Biology Lab", "MSC304WI": "Ichthyology"}
 
-management_courses = {"MGT 301": "Principles of Management", "MGT 320": "Organizational Behavior", "MGT 330": "Human Resource Management", "MGT 410": "Operations Management", "MGT 420": "Strategic Management"}
+marketing_courses = {"MKG765": "Marketing with a Global Mindset", "MKG540": "Strategic Marketing in a Digital Economy", "MKG587": "Project Class", "MKG301": "Principles of", "MKG438": "Marketing Strategy"}
 
-marine_science_courses = {"MSC 101": "Introduction to Marine Science", "MSC 220": "Oceanography", "MSC 240": "Marine Ecology", "MSC 320": "Marine Conservation", "MSC 410": "Coastal Processes"}
+mathematics_courses = {"MATH104": "College Algebra", "MATH110": "Mathematics of Motion & Change", "MATH112": "Modern Applications of Math", "MATH112H": "Honors: Modern Appl of Math", "MATH114": "Discover, Decode, Decide"}
 
-marketing_courses = {"MKT 301": "Principles of Marketing", "MKT 320": "Consumer Behavior", "MKT 330": "Digital Marketing", "MKT 410": "Marketing Research", "MKT 420": "Strategic Marketing"}
+mechanical_engineering_courses = {"ME202": "Materials in Design", "ME221": "Mechanics I", "ME222": "Mechanics II", "ME315": "Mechanical Systems Design", "ME321": "Thermofluids I"}
 
-mathematics_courses = {"MAT 103": "College Algebra", "MAT 150": "Precalculus", "MAT 201": "Calculus I", "MAT 202": "Calculus II", "MAT 310": "Linear Algebra"}
+music_courses = {"MUS100": "Recital Attendance", "MUS111": "Essential Keyboard Skills", "MUS116": "Singer's Diction I", "MUS141": "Music Theory I", "MUS144": "Acoustics & Recording Techniques"}
 
-mechanical_engineering_courses = {"ME 201": "Engineering Mechanics", "ME 220": "Materials Science", "ME 310": "Fluid Mechanics", "ME 320": "Heat Transfer", "ME 410": "Machine Design"}
+nursing_courses = {"NUR530": "Financial Management of Nursing Systems", "NUR531": "Human Resource Mgt Healthcare", "NUR532": "Nursing Leadership in Healthcare Systems", "NUR112": "Introduction to Nursing", "NUR204": "Foundations of Pharmacology"}
 
-music_courses = {"MUS 101": "Music Appreciation", "MUS 120": "Music Theory I", "MUS 121": "Music Theory II", "MUS 220": "History of Western Music", "MUS 410": "Senior Recital"}
+philosophy_courses = {"PHIL101": "Introduction to Philosophy", "PHIL101H": "Hon: Intro to Philosophy", "PHIL189": "Philosophy for Coping", "PHIL212": "Ethics", "PHIL311": "Political Philosophy"}
 
-nursing_courses = {"NUR 201": "Foundations of Nursing", "NUR 220": "Health Assessment", "NUR 301": "Adult Health Nursing", "NUR 320": "Pharmacology", "NUR 410": "Community Health Nursing"}
+physics_courses = {"PHYS104": "Astronomy", "PHYS111": "Principles of Physics I", "PHYS116": "Astronomy Laboratory", "PHYS125": "Aviation Physics", "PHYS151": "General Physics: Mechanics"}
 
-philosophy_courses = {"PHI 101": "Introduction to Philosophy", "PHI 210": "Ethics", "PHI 220": "Logic", "PHI 320": "Political Philosophy", "PHI 410": "Philosophy of Mind"}
+political_science_courses = {"POL205": "American National Government", "POL208": "International Politics", "POL211": "Quantitative Methods for Social Science", "POL307": "Congressional Politics", "POL309": "Constitutional Law"}
 
-physics_courses = {"PHY 201": "University Physics I", "PHY 202": "University Physics II", "PHY 310": "Modern Physics", "PHY 320": "Electricity and Magnetism", "PHY 410": "Quantum Mechanics"}
+psychology_courses = {"PSYC201": "Introductory Psychology", "PSYC210": "Human Growth & Development", "PSYC211": "Quantitative Methods Soc Sci", "PSYC225": "Professional Development", "PSYC250": "The Power of Difference: Conversations"}
 
-political_science_courses = {"POL 101": "Introduction to Political Science", "POL 220": "American Government", "POL 230": "International Relations", "POL 320": "Comparative Politics", "POL 410": "Public Policy"}
+public_health_courses = {"HLSC301": "Epidemiology in Health Science", "HLSC412": "Public Health", "NUR630": "Epidemiology and Biostatistics", "MSHI524": "Public/Population Health Informatics", "NUR587": "Population Health Informatics"}
 
-psychology_courses = {"PSY 101": "Introduction to Psychology", "PSY 220": "Developmental Psychology", "PSY 230": "Abnormal Psychology", "PSY 310": "Cognitive Psychology", "PSY 340": "Research Methods in Psychology"}
+sociology_courses = {"SOC203": "Introductory Sociology", "SOC211": "Quantitative Methods for Social Science", "SOC250": "The Power of Difference: Conversations", "SOC275TI": "Geographic Information Systems", "SOC303": "Geography of Middle East"}
 
-public_health_courses = {"PBH 101": "Introduction to Public Health", "PBH 220": "Epidemiology", "PBH 230": "Global Health", "PBH 320": "Health Promotion", "PBH 410": "Public Health Policy"}
+software_engineering_courses = {"CS158": "Fundamentals of Programming", "CS260": "Object-Oriented Programming", "CS302": "Software Design & Development", "CS395SI": "Software Engineering", "CS380": "Web Programming"}
 
-software_engineering_courses = {"SWE 210": "Software Engineering Fundamentals", "SWE 220": "Object-Oriented Design", "SWE 310": "Software Testing", "SWE 320": "Agile Development", "SWE 410": "Software Architecture"}
+sport_management_courses = {"SPO300": "Introduction to the Business of Sport", "SPO320": "Sport Facility and Event Management", "SPO370": "Sport Promotion and Technology", "SIS200": "Introduction to Sports in Society", "ECON340": "Sports Economics"}
 
-sociology_courses = {"SOC 101": "Introduction to Sociology", "SOC 220": "Social Problems", "SOC 230": "Race and Ethnicity", "SOC 320": "Sociological Theory", "SOC 410": "Research Methods in Sociology"}
+statistics_courses = {"DSIM201": "Business Statistics", "DSIM603": "Applied Statistical Modeling and Analysis", "DSIM405": "Advanced Statistics and Econometrics", "MATH206": "Statistical Methods in Science", "MATH315": "Probability"}
 
-sport_management_courses = {"SPM 101": "Introduction to Sport Management", "SPM 220": "Sport Marketing", "SPM 230": "Sport Finance", "SPM 320": "Event and Facility Management", "SPM 410": "Sport Law"}
-
-statistics_courses = {"STA 201": "Introduction to Statistics", "STA 220": "Business Statistics", "STA 310": "Probability Theory", "STA 320": "Applied Regression", "STA 410": "Statistical Modeling"}
-
-theatre_courses = {"THR 101": "Introduction to Theatre", "THR 120": "Acting I", "THR 220": "Stagecraft", "THR 320": "Directing", "THR 410": "Theatre Production"}
-
+theatre_courses = {"THEA110": "Introduction to Theatre", "THEA113": "Acting I", "THEA114": "Acting II Scene Study", "THEA115": "Intro to Technical Theatre", "THEA199": "Special Topics"}
 
 example_commit = str("")
-
