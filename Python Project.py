@@ -1,4 +1,5 @@
 ## Course Catalogue in Python Using Dictionaries
+import json
 
 accounting_courses = {"ACCT760": "Advanced Managerial Accounting", "ACCT650": "Adv Managerial Acct & Fin Modeling", "ACCT680": "Financial Decision-making", "ACCT620": "Advanced Managerial Accounting", "ACCT201": "Principles of Accounting I"}
 
@@ -84,4 +85,174 @@ statistics_courses = {"DSIM201": "Business Statistics", "DSIM603": "Applied Stat
 
 theatre_courses = {"THEA110": "Introduction to Theatre", "THEA113": "Acting I", "THEA114": "Acting II Scene Study", "THEA115": "Intro to Technical Theatre", "THEA199": "Special Topics"}
 
+# JU Colleges (https://www.ju.edu/academics/colleges/index.php)
+
+linda_berry_stein_college_of_arts_and_sciences = {"art": art_courses, "biology": biology_courses, "chemistry": chemistry_courses, "communication": communication_courses, "data_science": data_science_courses, "education": education_courses, "english": english_courses, "environmental_science": environmental_science_courses, "exercise_science": exercise_science_courses, "general": general_courses, "history": history_courses, "marine_science": marine_science_courses, "mathematics": mathematics_courses, "music": music_courses, "philosophy": philosophy_courses, "physics": physics_courses, "political_science": political_science_courses, "psychology": psychology_courses, "sociology": sociology_courses, "theatre": theatre_courses}
+
+davis_college_of_business_and_technology = {"accounting": accounting_courses, "aviation": aviation_courses, "business": business_courses, "computer_science": computer_science_courses, "cybersecurity": cybersecurity_courses, "economics": economics_courses, "electrical_engineering": electrical_engineering_courses, "engineering": engineering_courses, "entrepreneurship": entrepreneurship_courses, "finance": finance_courses, "information_technology": information_technology_courses, "international_business": international_business_courses, "management": management_courses, "marketing": marketing_courses, "mechanical_engineering": mechanical_engineering_courses, "software_engineering": software_engineering_courses, "sport_management": sport_management_courses, "statistics": statistics_courses}
+
+brooks_rehabilitation_college_of_healthcare_sciences = {"healthcare_administration": healthcare_administration_courses, "nursing": nursing_courses, "public_health": public_health_courses}
+
+college_of_law = {"criminal_justice": criminal_justice_courses}
+
 example_commit = str("")
+
+all_majors = {**linda_berry_stein_college_of_arts_and_sciences, **davis_college_of_business_and_technology, **brooks_rehabilitation_college_of_healthcare_sciences, **college_of_law}
+
+def organize_major_by_semester(courses):
+    semester_map = {semester: {} for semester in range(1, 9)}
+
+    def first_numeric_block(course_code):
+        digits = ""
+        for character in course_code:
+            if character.isdigit():
+                digits += character
+            elif digits:
+                break
+        if digits:
+            return int(digits)
+        return 100
+
+    def base_semester(course_number):
+        if course_number < 200:
+            return 1
+        if course_number < 300:
+            return 3
+        if course_number < 400:
+            return 5
+        return 7
+
+    for code, title in courses.items():
+        course_number = first_numeric_block(code)
+        semester_start = base_semester(course_number)
+        title_upper = title.upper()
+
+        if " II" in title_upper or " 2" in title_upper or course_number % 2 == 0:
+            semester = semester_start + 1
+        else:
+            semester = semester_start
+
+        semester_map[semester][code] = title
+
+    return semester_map
+
+classes_by_major_and_semester = {major_name: organize_major_by_semester(courses) for major_name, courses in all_majors.items()}
+
+college_to_majors = {
+    "linda_berry_stein_college_of_arts_and_sciences": linda_berry_stein_college_of_arts_and_sciences,
+    "davis_college_of_business_and_technology": davis_college_of_business_and_technology,
+    "brooks_rehabilitation_college_of_healthcare_sciences": brooks_rehabilitation_college_of_healthcare_sciences,
+    "college_of_law": college_of_law,
+}
+
+ju_catalog = {
+    college_name: {
+        major_name: {
+            str(semester): classes_by_major_and_semester[major_name][semester]
+            for semester in range(1, 9)
+        }
+        for major_name in majors
+    }
+    for college_name, majors in college_to_majors.items()
+}
+
+with open("ju_catalog.json", "w", encoding="utf-8") as json_file:
+    json.dump(ju_catalog, json_file, indent=2)
+
+# Semester 1 variables for every major
+semester_1_by_major = {major_name: semester_plan[1] for major_name, semester_plan in classes_by_major_and_semester.items()}
+
+accounting_year_1_semester_1 = semester_1_by_major["accounting"]
+art_year_1_semester_1 = semester_1_by_major["art"]
+aviation_year_1_semester_1 = semester_1_by_major["aviation"]
+biology_year_1_semester_1 = semester_1_by_major["biology"]
+business_year_1_semester_1 = semester_1_by_major["business"]
+chemistry_year_1_semester_1 = semester_1_by_major["chemistry"]
+communication_year_1_semester_1 = semester_1_by_major["communication"]
+computer_science_year_1_semester_1 = semester_1_by_major["computer_science"]
+criminal_justice_year_1_semester_1 = semester_1_by_major["criminal_justice"]
+cybersecurity_year_1_semester_1 = semester_1_by_major["cybersecurity"]
+data_science_year_1_semester_1 = semester_1_by_major["data_science"]
+economics_year_1_semester_1 = semester_1_by_major["economics"]
+education_year_1_semester_1 = semester_1_by_major["education"]
+electrical_engineering_year_1_semester_1 = semester_1_by_major["electrical_engineering"]
+engineering_year_1_semester_1 = semester_1_by_major["engineering"]
+english_year_1_semester_1 = semester_1_by_major["english"]
+entrepreneurship_year_1_semester_1 = semester_1_by_major["entrepreneurship"]
+environmental_science_year_1_semester_1 = semester_1_by_major["environmental_science"]
+exercise_science_year_1_semester_1 = semester_1_by_major["exercise_science"]
+finance_year_1_semester_1 = semester_1_by_major["finance"]
+general_year_1_semester_1 = semester_1_by_major["general"]
+healthcare_administration_year_1_semester_1 = semester_1_by_major["healthcare_administration"]
+history_year_1_semester_1 = semester_1_by_major["history"]
+information_technology_year_1_semester_1 = semester_1_by_major["information_technology"]
+international_business_year_1_semester_1 = semester_1_by_major["international_business"]
+management_year_1_semester_1 = semester_1_by_major["management"]
+marine_science_year_1_semester_1 = semester_1_by_major["marine_science"]
+marketing_year_1_semester_1 = semester_1_by_major["marketing"]
+mathematics_year_1_semester_1 = semester_1_by_major["mathematics"]
+mechanical_engineering_year_1_semester_1 = semester_1_by_major["mechanical_engineering"]
+music_year_1_semester_1 = semester_1_by_major["music"]
+nursing_year_1_semester_1 = semester_1_by_major["nursing"]
+philosophy_year_1_semester_1 = semester_1_by_major["philosophy"]
+physics_year_1_semester_1 = semester_1_by_major["physics"]
+political_science_year_1_semester_1 = semester_1_by_major["political_science"]
+psychology_year_1_semester_1 = semester_1_by_major["psychology"]
+public_health_year_1_semester_1 = semester_1_by_major["public_health"]
+sociology_year_1_semester_1 = semester_1_by_major["sociology"]
+software_engineering_year_1_semester_1 = semester_1_by_major["software_engineering"]
+sport_management_year_1_semester_1 = semester_1_by_major["sport_management"]
+statistics_year_1_semester_1 = semester_1_by_major["statistics"]
+theatre_year_1_semester_1 = semester_1_by_major["theatre"]
+
+def next_semester(current_semester):
+    if current_semester < 8:
+        return current_semester + 1
+    return None
+
+while True:
+    major = input("What is your major? (or type 'close' to exit): ").strip().lower()
+
+    if major == "close":
+        print("Program closed.")
+        break
+
+    if major not in all_majors:
+        print("Major not found.")
+    else:
+        try:
+            semester = int(input("What semester are you in (1-8)?: ").strip())
+        except ValueError:
+            semester = 1
+
+        if semester < 1 or semester > 8:
+            semester = 1
+
+        selected_term_courses = classes_by_major_and_semester[major][semester]
+
+        print("Classes for " + major + " - Semester " + str(semester) + ":")
+        if selected_term_courses:
+            for course, title in selected_term_courses.items():
+                print(course + ": " + title)
+        else:
+            print("No classes listed for this term.")
+
+        searched_class = input("\nWhat class code are you searching for (example: EE221)?: ").strip().upper()
+
+        if searched_class not in all_majors[major]:
+            print("That class is not listed for the " + major + " major.")
+        else:
+            upcoming_semester = next_semester(semester)
+            if upcoming_semester is None:
+                print("You are in Semester 8, so there is no next semester in this plan.")
+            else:
+                next_term_courses = classes_by_major_and_semester[major][upcoming_semester]
+                if searched_class in next_term_courses:
+                    print("Yes, " + searched_class + " is in next semester for " + major + ".")
+                else:
+                    print("No, " + searched_class + " is not in next semester for " + major + ".")
+
+    next_action = input("\nType 'close' to exit or press Enter to run again: ").strip().lower()
+    if next_action == "close":
+        print("Program closed.")
+        break

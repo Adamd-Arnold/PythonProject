@@ -1,0 +1,752 @@
+{
+  "linda_berry_stein_college_of_arts_and_sciences": {
+    "art": {
+      "1": {
+        "ART103": "3D Art Foundations",
+        "ART107": "Drawing I",
+        "ART115TI": "Visual Media Foundations"
+      },
+      "2": {
+        "ART102": "2D Art Foundations"
+      },
+      "3": {},
+      "4": {
+        "ART202": "Illustration Methods"
+      },
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "biology": {
+      "1": {},
+      "2": {
+        "BIOL100": "Principles of Biology",
+        "BIOL180": "Biological Diversity",
+        "BIOL190": "Biological Unity"
+      },
+      "3": {
+        "BIOL215": "Human Anatomy & Physiology I"
+      },
+      "4": {
+        "BIOL222": "Microbiology for Health Professionals"
+      },
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "chemistry": {
+      "1": {
+        "CHEM101": "Introductory College Chemistry",
+        "CHEM101H": "Honors: Introductory College Chemistry"
+      },
+      "2": {
+        "CHEM120": "Urban Environmental Issues"
+      },
+      "3": {},
+      "4": {
+        "CHEM204": "General Chemistry I",
+        "CHEM204H": "Hon General Chemistry I"
+      },
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "communication": {
+      "1": {},
+      "2": {},
+      "3": {
+        "COMM201SI": "Introduction to Public Speaking",
+        "COMM207WI": "Online Newswriting"
+      },
+      "4": {},
+      "5": {
+        "COMM395": "Communication Practicum 1\u20133"
+      },
+      "6": {
+        "COMM332WI": "Social Media: Writing"
+      },
+      "7": {
+        "COMM401": "Communicating to Diverse Publics"
+      },
+      "8": {}
+    },
+    "data_science": {
+      "1": {},
+      "2": {
+        "MATH170TI": "Data Science Foundations"
+      },
+      "3": {},
+      "4": {
+        "MATH270": "Introduction to Data Science"
+      },
+      "5": {
+        "DSIM307": "Introduction to Business Analytics"
+      },
+      "6": {},
+      "7": {},
+      "8": {
+        "DSIM602": "Introduction to Applied Business Analytics",
+        "DSIM606": "Data Mining and Predictive Analytics"
+      }
+    },
+    "education": {
+      "1": {
+        "EDU103": "PM 1 - Intro Found in Educatn"
+      },
+      "2": {
+        "EDU102": "Human Development & Learning"
+      },
+      "3": {
+        "EDU287": "Special Topics in Edu"
+      },
+      "4": {
+        "EDU248": "ESOL 2 - Methods of Teaching"
+      },
+      "5": {},
+      "6": {
+        "EDU312SI": "Intro to Civic Engagement"
+      },
+      "7": {},
+      "8": {}
+    },
+    "english": {
+      "1": {
+        "ENGL101": "Elements of Composition",
+        "ENGL103": "Introductory Writing",
+        "ENGL103H": "Hon: Introductory Writing",
+        "ENGL189": "Southern Women Writers"
+      },
+      "2": {},
+      "3": {},
+      "4": {
+        "ENGL200": "Aquarian Practicum"
+      },
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "environmental_science": {
+      "1": {
+        "ENV101": "Intro to Environmental Studies"
+      },
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "exercise_science": {
+      "1": {
+        "EXSC101": "Intro to Exercise Science"
+      },
+      "2": {
+        "EXSC180": "Wingshooting I; Beginning",
+        "EXSC181": "Wingshooting Ii; Intermediate",
+        "EXSC182": "Wingshooting Iii; Advanced"
+      },
+      "3": {},
+      "4": {},
+      "5": {
+        "EXSC305": "Principles of Group Exercise"
+      },
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "general": {
+      "1": {
+        "ENGL101": "Elements of Composition",
+        "PHIL101": "Introduction to Philosophy"
+      },
+      "2": {
+        "MATH104": "College Algebra",
+        "HIST150": "The Modern World",
+        "BIOL100": "Principles of Biology"
+      },
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "history": {
+      "1": {},
+      "2": {
+        "HIST150": "The Modern World"
+      },
+      "3": {
+        "HIST207": "History of the United States From"
+      },
+      "4": {
+        "HIST206": "History of the United States to"
+      },
+      "5": {},
+      "6": {
+        "HIST300": "History of Sports",
+        "HIST350": "Special Topics in History"
+      },
+      "7": {},
+      "8": {}
+    },
+    "marine_science": {
+      "1": {
+        "MSC111": "Introduction to Oceanography",
+        "MSC113": "Intro to Marine Biology"
+      },
+      "2": {
+        "MSC112": "Introduction Oceanography Lab",
+        "MSC114": "Intro to Marine Biology Lab"
+      },
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {
+        "MSC304WI": "Ichthyology"
+      },
+      "7": {},
+      "8": {}
+    },
+    "mathematics": {
+      "1": {},
+      "2": {
+        "MATH104": "College Algebra",
+        "MATH110": "Mathematics of Motion & Change",
+        "MATH112": "Modern Applications of Math",
+        "MATH112H": "Honors: Modern Appl of Math",
+        "MATH114": "Discover, Decode, Decide"
+      },
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "music": {
+      "1": {
+        "MUS111": "Essential Keyboard Skills",
+        "MUS141": "Music Theory I"
+      },
+      "2": {
+        "MUS100": "Recital Attendance",
+        "MUS116": "Singer's Diction I",
+        "MUS144": "Acoustics & Recording Techniques"
+      },
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "philosophy": {
+      "1": {
+        "PHIL101": "Introduction to Philosophy",
+        "PHIL101H": "Hon: Intro to Philosophy",
+        "PHIL189": "Philosophy for Coping"
+      },
+      "2": {},
+      "3": {},
+      "4": {
+        "PHIL212": "Ethics"
+      },
+      "5": {
+        "PHIL311": "Political Philosophy"
+      },
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "physics": {
+      "1": {
+        "PHYS111": "Principles of Physics I",
+        "PHYS125": "Aviation Physics",
+        "PHYS151": "General Physics: Mechanics"
+      },
+      "2": {
+        "PHYS104": "Astronomy",
+        "PHYS116": "Astronomy Laboratory"
+      },
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "political_science": {
+      "1": {},
+      "2": {},
+      "3": {
+        "POL205": "American National Government",
+        "POL211": "Quantitative Methods for Social Science"
+      },
+      "4": {
+        "POL208": "International Politics"
+      },
+      "5": {
+        "POL307": "Congressional Politics",
+        "POL309": "Constitutional Law"
+      },
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "psychology": {
+      "1": {},
+      "2": {},
+      "3": {
+        "PSYC201": "Introductory Psychology",
+        "PSYC211": "Quantitative Methods Soc Sci",
+        "PSYC225": "Professional Development"
+      },
+      "4": {
+        "PSYC210": "Human Growth & Development",
+        "PSYC250": "The Power of Difference: Conversations"
+      },
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "sociology": {
+      "1": {},
+      "2": {},
+      "3": {
+        "SOC203": "Introductory Sociology",
+        "SOC211": "Quantitative Methods for Social Science",
+        "SOC275TI": "Geographic Information Systems"
+      },
+      "4": {
+        "SOC250": "The Power of Difference: Conversations"
+      },
+      "5": {
+        "SOC303": "Geography of Middle East"
+      },
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "theatre": {
+      "1": {
+        "THEA113": "Acting I",
+        "THEA115": "Intro to Technical Theatre",
+        "THEA199": "Special Topics"
+      },
+      "2": {
+        "THEA110": "Introduction to Theatre",
+        "THEA114": "Acting II Scene Study"
+      },
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    }
+  },
+  "davis_college_of_business_and_technology": {
+    "accounting": {
+      "1": {},
+      "2": {},
+      "3": {
+        "ACCT201": "Principles of Accounting I"
+      },
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {
+        "ACCT760": "Advanced Managerial Accounting",
+        "ACCT650": "Adv Managerial Acct & Fin Modeling",
+        "ACCT680": "Financial Decision-making",
+        "ACCT620": "Advanced Managerial Accounting"
+      }
+    },
+    "aviation": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {
+        "AVM301": "Aviation History & Developmnt",
+        "AVM303RI": "Intro Unmanned Aircraft Systems",
+        "AVM311": "Airline Management"
+      },
+      "6": {
+        "AVM302": "Aviation Economics",
+        "AVM306": "Airport Planning & Management"
+      },
+      "7": {},
+      "8": {}
+    },
+    "business": {
+      "1": {},
+      "2": {
+        "BUS102": "Business Scholars I"
+      },
+      "3": {},
+      "4": {
+        "BUS202": "Business Scholars II"
+      },
+      "5": {},
+      "6": {
+        "BUS302": "Business Scholars II",
+        "BUS390": "Internship in Business"
+      },
+      "7": {},
+      "8": {
+        "BUS402": "Business Scholars IV"
+      }
+    },
+    "computer_science": {
+      "1": {
+        "CS155": "Foundations of Computer Science",
+        "CS199": "Introduction to Special Topics in Computing Science"
+      },
+      "2": {
+        "CS102": "Introduction of Computational Thinking",
+        "CS150": "Personal Productivity Using Technology",
+        "CS158": "Fundamentals of Programming"
+      },
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "cybersecurity": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {
+        "CS341": "Introduction to Cybersecurity",
+        "CS345SI": "Network Security"
+      },
+      "6": {},
+      "7": {
+        "CS449": "Digital Forensics",
+        "CS601": "Foundations of Cybersecurity"
+      },
+      "8": {
+        "CS610": "Cyber Threat Intelligence"
+      }
+    },
+    "economics": {
+      "1": {},
+      "2": {},
+      "3": {
+        "ECON201": "Principles of Macroeconomics",
+        "ECON211": "Quantitative Methods Soc Sci"
+      },
+      "4": {
+        "ECON202": "Principles of Microeconomics"
+      },
+      "5": {},
+      "6": {
+        "ECON310": "Money & Banking",
+        "ECON340": "Sports Economics"
+      },
+      "7": {},
+      "8": {}
+    },
+    "electrical_engineering": {
+      "1": {},
+      "2": {},
+      "3": {
+        "EE221": "Digital I"
+      },
+      "4": {
+        "EE222": "Analog I"
+      },
+      "5": {
+        "EE331": "Electronic Power System Dsgn",
+        "EE311": "Linear Systems Design"
+      },
+      "6": {
+        "EE322": "Analog II"
+      },
+      "7": {},
+      "8": {}
+    },
+    "engineering": {
+      "1": {
+        "ENGR111": "Freshmen Design",
+        "ENGR151": "Applied Physics for Engineering Design I",
+        "ENGR151L": "Applied Physics for Engineering Lab"
+      },
+      "2": {
+        "ENGR152": "App Physics for Engineering Design II",
+        "ENGR152L": "Engineering Physics II Lab"
+      },
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "entrepreneurship": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {
+        "ENT480": "Special Topics in Entrepreneurship",
+        "ENT482": "Managing Growing Enterprise"
+      }
+    },
+    "finance": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {
+        "FIN301": "Corporate Finance"
+      },
+      "6": {},
+      "7": {
+        "FIN587": "ST/Portfolio Management Capstone"
+      },
+      "8": {
+        "FIN750": "Corporate Mergers Acquisitions Valuation",
+        "FIN610": "Practicum in Portfolio Management",
+        "FIN612": "Investment Management"
+      }
+    },
+    "information_technology": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {
+        "CS345SI": "Network Security"
+      },
+      "6": {
+        "ACCT370": "Accounting Information Systems",
+        "CS330": "Networks & Wireless Communications",
+        "CS380": "Web Programming"
+      },
+      "7": {},
+      "8": {
+        "CS600": "Network and Wireless Communications"
+      }
+    },
+    "international_business": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {
+        "POL208": "International Politics"
+      },
+      "5": {
+        "INB341": "International Marketing"
+      },
+      "6": {},
+      "7": {
+        "INB555": "Competing in the Global Economy",
+        "MGT545": "Global Corporate Strategy and Policy"
+      },
+      "8": {
+        "INB410": "Economics of Globalization"
+      }
+    },
+    "management": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {
+        "MGT715": "Entrepreneurial Behavior in Organizations"
+      },
+      "8": {
+        "MGT736": "Strategic Leadership",
+        "MGT566": "Legal & Ethical Environment of Business",
+        "MGT610": "Strategic Human Resource Management",
+        "MGT620": "Responsible Leadership"
+      }
+    },
+    "marketing": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {
+        "MKG301": "Principles of"
+      },
+      "6": {},
+      "7": {
+        "MKG765": "Marketing with a Global Mindset",
+        "MKG587": "Project Class"
+      },
+      "8": {
+        "MKG540": "Strategic Marketing in a Digital Economy",
+        "MKG438": "Marketing Strategy"
+      }
+    },
+    "mechanical_engineering": {
+      "1": {},
+      "2": {},
+      "3": {
+        "ME221": "Mechanics I"
+      },
+      "4": {
+        "ME202": "Materials in Design",
+        "ME222": "Mechanics II"
+      },
+      "5": {
+        "ME315": "Mechanical Systems Design",
+        "ME321": "Thermofluids I"
+      },
+      "6": {},
+      "7": {},
+      "8": {}
+    },
+    "software_engineering": {
+      "1": {},
+      "2": {
+        "CS158": "Fundamentals of Programming"
+      },
+      "3": {},
+      "4": {
+        "CS260": "Object-Oriented Programming"
+      },
+      "5": {
+        "CS395SI": "Software Engineering"
+      },
+      "6": {
+        "CS302": "Software Design & Development",
+        "CS380": "Web Programming"
+      },
+      "7": {},
+      "8": {}
+    },
+    "sport_management": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {
+        "SIS200": "Introduction to Sports in Society"
+      },
+      "5": {},
+      "6": {
+        "SPO300": "Introduction to the Business of Sport",
+        "SPO320": "Sport Facility and Event Management",
+        "SPO370": "Sport Promotion and Technology",
+        "ECON340": "Sports Economics"
+      },
+      "7": {},
+      "8": {}
+    },
+    "statistics": {
+      "1": {},
+      "2": {},
+      "3": {
+        "DSIM201": "Business Statistics"
+      },
+      "4": {
+        "MATH206": "Statistical Methods in Science"
+      },
+      "5": {
+        "MATH315": "Probability"
+      },
+      "6": {},
+      "7": {
+        "DSIM603": "Applied Statistical Modeling and Analysis",
+        "DSIM405": "Advanced Statistics and Econometrics"
+      },
+      "8": {}
+    }
+  },
+  "brooks_rehabilitation_college_of_healthcare_sciences": {
+    "healthcare_administration": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {
+        "HLSC301": "Epidemiology in Health Science"
+      },
+      "6": {},
+      "7": {},
+      "8": {
+        "NUR670": "Leadership and Health Policy",
+        "HLSC412": "Public Health",
+        "MSHI524": "Public/Population Health Informatics",
+        "NUR630": "Epidemiology and Biostatistics"
+      }
+    },
+    "nursing": {
+      "1": {},
+      "2": {
+        "NUR112": "Introduction to Nursing"
+      },
+      "3": {},
+      "4": {
+        "NUR204": "Foundations of Pharmacology"
+      },
+      "5": {},
+      "6": {},
+      "7": {
+        "NUR531": "Human Resource Mgt Healthcare"
+      },
+      "8": {
+        "NUR530": "Financial Management of Nursing Systems",
+        "NUR532": "Nursing Leadership in Healthcare Systems"
+      }
+    },
+    "public_health": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {
+        "HLSC301": "Epidemiology in Health Science"
+      },
+      "6": {},
+      "7": {
+        "NUR587": "Population Health Informatics"
+      },
+      "8": {
+        "HLSC412": "Public Health",
+        "NUR630": "Epidemiology and Biostatistics",
+        "MSHI524": "Public/Population Health Informatics"
+      }
+    }
+  },
+  "college_of_law": {
+    "criminal_justice": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {
+        "SOC305": "Criminology"
+      },
+      "6": {
+        "SOC320": "Green Criminology"
+      },
+      "7": {
+        "LAW707": "Criminal Law and Procedure I"
+      },
+      "8": {
+        "LAW717": "Criminal Law and Procedure II",
+        "LAW742": "Advanced Criminal Procedure"
+      }
+    }
+  }
+}
