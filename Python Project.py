@@ -94,16 +94,28 @@ accounting_name_index = list(course_catalogue_index[0].values())[0]
 
 
 aviation_classes = [
-    {"course_code": accounting_code_index, "course_name": accounting_name_index, "professor": "Dr. Smith", "credit_hours": 3, "Year": "Freshman"},
-    {"course_code": accounting_code_index[1], "course_name": accounting_name_index[1], "professor": "Dr. Johnson", "credit_hours": 3, "Year": "Sophomore"},
-    {"course_code": accounting_code_index[2], "course_name": accounting_name_index[2], "professor": "Dr. Lee", "credit_hours": 3, "Year": "Junior"},
-    {"course_code": accounting_code_index[3], "course_name": accounting_name_index[3], "professor": "Dr. Brown", "credit_hours": 4, "Year": "Senior"},
-    {"course_code": accounting_code_index[4], "course_name": accounting_name_index[4], "professor": "Dr. Davis", "credit_hours": 4, "Year": "Senior"}
+    {"course_code": "AVI 101", "course_name": "Introduction to Aviation", "professor": "Prof. James Carter", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "AVI 120", "course_name": "Private Pilot Ground School", "professor": "Prof. Elena Brooks", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "AVI 230", "course_name": "Instrument Flight Theory", "professor": "Prof. Marcus Reed", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "AVI 310", "course_name": "Aviation Safety", "professor": "Prof. Dana Mitchell", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "AVI 360", "course_name": "Air Traffic Systems", "professor": "Prof. Aaron Phillips", "credit_hours": 4, "Year": "Senior"}
     ]
 
-biology_classes = []
+biology_classes = [
+    {"course_code": "BIO 110", "course_name": "Principles of Biology I", "professor": "Prof. Hannah Cole", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "BIO 111", "course_name": "Principles of Biology II", "professor": "Prof. Victor Lane", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "BIO 220", "course_name": "Genetics", "professor": "Prof. Priya Menon", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "BIO 330", "course_name": "Microbiology", "professor": "Prof. Samuel Ortiz", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "BIO 410", "course_name": "Ecology", "professor": "Prof. Rachel Kim", "credit_hours": 4, "Year": "Senior"}
+]
 
-business_classes = []
+business_classes = [
+    {"course_code": "BUS 101", "course_name": "Introduction to Business", "professor": "Prof. Lauren Hayes", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "ACC 201", "course_name": "Financial Accounting", "professor": "Prof. Michael Grant", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "ECO 201", "course_name": "Microeconomics", "professor": "Prof. Nina Wallace", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "MKT 301", "course_name": "Principles of Marketing", "professor": "Prof. Derek Sullivan", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "FIN 320", "course_name": "Corporate Finance", "professor": "Prof. Olivia Turner", "credit_hours": 4, "Year": "Senior"}
+]
     
 '''
 To print accounting classes only with Freshman year, we would do:
