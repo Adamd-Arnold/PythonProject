@@ -1,55 +1,8 @@
 ## Course Catalogue in Python Using Dictionaries
-
-
-accounting_courses = {"ACC 201": "Financial Accounting", "ACC 202": "Managerial Accounting", "ACC 310": "Intermediate Accounting I", "ACC 311": "Intermediate Accounting II", "ACC 420": "Auditing"}
-
-aviation_courses = {"AVI 101": "Introduction to Aviation", "AVI 120": "Private Pilot Ground School", "AVI 230": "Instrument Flight Theory", "AVI 310": "Aviation Safety", "AVI 360": "Air Traffic Systems"}
-
-biology_courses = {"BIO 110": "Principles of Biology I", "BIO 111": "Principles of Biology II", "BIO 220": "Genetics", "BIO 330": "Microbiology", "BIO 410": "Ecology"}
-
-business_courses = {"BUS 101": "Introduction to Business", "ACC 201": "Financial Accounting", "ECO 201": "Microeconomics", "MKT 301": "Principles of Marketing", "FIN 320": "Corporate Finance"}
-
-communication_courses = {"COM 101": "Public Speaking", "COM 210": "Interpersonal Communication", "COM 230": "Mass Media and Society", "COM 320": "Organizational Communication", "COM 350": "Digital Media Production"}
-
-computer_science_courses = {"CS 110": "Introduction to Programming", "CS 220": "Data Structures", "CS 230": "Computer Organization", "CS 310": "Algorithms", "CS 340": "Database Systems"}
-
-criminal_justice_courses = {"CRJ 101": "Introduction to Criminal Justice", "CRJ 210": "Criminology", "CRJ 230": "Policing in America", "CRJ 320": "Corrections", "CRJ 410": "Criminal Law"}
-
-cybersecurity_courses = {"CYB 210": "Introduction to Cybersecurity", "CYB 220": "Network Security", "CYB 310": "Ethical Hacking", "CYB 320": "Digital Forensics", "CYB 410": "Security Operations"}
-
-economics_courses = {"ECO 201": "Microeconomics", "ECO 202": "Macroeconomics", "ECO 310": "Intermediate Microeconomics", "ECO 311": "Intermediate Macroeconomics", "ECO 420": "Econometrics"}
-
-education_courses = {"EDU 200": "Foundations of Education", "EDU 240": "Educational Psychology", "EDU 300": "Classroom Management", "EDU 330": "Assessment and Instruction", "EDU 410": "Student Teaching Seminar"}
-
-engineering_courses = {"ENGR 101": "Introduction to Engineering", "ENGR 201": "Statics", "ENGR 220": "Dynamics", "ENGR 250": "Thermodynamics", "ENGR 310": "Circuits"}
-
-english_courses = {"ENG 101": "English Composition I", "ENG 102": "English Composition II", "ENG 220": "Introduction to Literature", "ENG 320": "American Literature", "ENG 410": "Advanced Writing"}
-
-exercise_science_courses = {"EXS 101": "Introduction to Exercise Science", "EXS 220": "Kinesiology", "EXS 230": "Exercise Physiology", "EXS 320": "Biomechanics", "EXS 410": "Strength and Conditioning"}
-
-finance_courses = {"FIN 301": "Principles of Finance", "FIN 320": "Corporate Finance", "FIN 330": "Investments", "FIN 410": "Financial Markets", "FIN 420": "International Finance"}
-
-general_courses = {"ENG 101": "English Composition I", "MAT 103": "College Algebra", "BIO 100": "General Biology", "HIS 201": "U.S. History", "PSY 101": "Introduction to Psychology"}
-
-management_courses = {"MGT 301": "Principles of Management", "MGT 320": "Organizational Behavior", "MGT 330": "Human Resource Management", "MGT 410": "Operations Management", "MGT 420": "Strategic Management"}
-
-marine_science_courses = {"MSC 101": "Introduction to Marine Science", "MSC 220": "Oceanography", "MSC 240": "Marine Ecology", "MSC 320": "Marine Conservation", "MSC 410": "Coastal Processes"}
-
-marketing_courses = {"MKT 301": "Principles of Marketing", "MKT 320": "Consumer Behavior", "MKT 330": "Digital Marketing", "MKT 410": "Marketing Research", "MKT 420": "Strategic Marketing"}
-
-music_courses = {"MUS 101": "Music Appreciation", "MUS 120": "Music Theory I", "MUS 121": "Music Theory II", "MUS 220": "History of Western Music", "MUS 410": "Senior Recital"}
-
-nursing_courses = {"NUR 201": "Foundations of Nursing", "NUR 220": "Health Assessment", "NUR 301": "Adult Health Nursing", "NUR 320": "Pharmacology", "NUR 410": "Community Health Nursing"}
-
-philosophy_courses = {"PHI 101": "Introduction to Philosophy", "PHI 210": "Ethics", "PHI 220": "Logic", "PHI 320": "Political Philosophy", "PHI 410": "Philosophy of Mind"}
-
-political_science_courses = {"POL 101": "Introduction to Political Science", "POL 220": "American Government", "POL 230": "International Relations", "POL 320": "Comparative Politics", "POL 410": "Public Policy"}
-
-psychology_courses = {"PSY 101": "Introduction to Psychology", "PSY 220": "Developmental Psychology", "PSY 230": "Abnormal Psychology", "PSY 310": "Cognitive Psychology", "PSY 340": "Research Methods in Psychology"}
-
+from course_list import COURSE_CATALOG
 
 ## Make a tuple of all the course dictionaries for easy access
-course_catalogue = (accounting_courses, aviation_courses, biology_courses, business_courses, communication_courses, computer_science_courses, criminal_justice_courses, cybersecurity_courses, economics_courses, education_courses, engineering_courses, english_courses, exercise_science_courses, finance_courses, general_courses, management_courses, marine_science_courses, marketing_courses, music_courses, nursing_courses, philosophy_courses, political_science_courses, psychology_courses)
+course_catalogue = tuple(COURSE_CATALOG.values())
 course_catalogue_index = list(course_catalogue)
 
 print(course_catalogue_index[0].values()) # This will print the course names for the accounting courses.
@@ -116,7 +69,164 @@ business_classes = [
     {"course_code": "MKT 301", "course_name": "Principles of Marketing", "professor": "Prof. Derek Sullivan", "credit_hours": 4, "Year": "Senior"},
     {"course_code": "FIN 320", "course_name": "Corporate Finance", "professor": "Prof. Olivia Turner", "credit_hours": 4, "Year": "Senior"}
 ]
-    
+engineering_classes = [
+    {"course_code": "ENG 101", "course_name": "Introduction to Engineering", "professor": "Prof. David Wright", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "ENG 201", "course_name": "Engineering Graphics", "professor": "Prof. Jennifer Lopez", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "ENG 301", "course_name": "Thermodynamics", "professor": "Prof. Robert Hill", "credit_hours": 4, "Year": "Junior"},
+    {"course_code": "ENG 401", "course_name": "Capstone Design Project", "professor": "Prof. Amanda Scott", "credit_hours": 4, "Year": "Senior"}
+]
+Finance_classes = [
+    {"course_code": "FIN 301", "course_name": "Principles of Finance", "professor": "Prof. Olivia Turner", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "FIN 320", "course_name": "Corporate Finance", "professor": "Prof. Olivia Turner", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "FIN 330", "course_name": "Investments", "professor": "Prof. Ethan Baker", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "FIN 410", "course_name": "Financial Markets", "professor": "Prof. Sophia Wilson", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "FIN 420", "course_name": "International Finance", "professor": "Prof. Liam Davis", "credit_hours": 4, "Year": "Senior"}
+]
+
+accounting_classes = [
+    {"course_code": "ACC 201", "course_name": "Financial Accounting", "professor": "Prof. Michael Grant", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "ACC 202", "course_name": "Managerial Accounting", "professor": "Prof. Lauren Hayes", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "ACC 310", "course_name": "Intermediate Accounting I", "professor": "Prof. Trevor Adams", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "ACC 311", "course_name": "Intermediate Accounting II", "professor": "Prof. Diana Brooks", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "ACC 420", "course_name": "Auditing", "professor": "Prof. Henry Collins", "credit_hours": 4, "Year": "Senior"}
+]
+
+communication_classes = [
+    {"course_code": "COM 101", "course_name": "Public Speaking", "professor": "Prof. Megan Price", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "COM 210", "course_name": "Interpersonal Communication", "professor": "Prof. Tyler Simmons", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "COM 230", "course_name": "Mass Media and Society", "professor": "Prof. Rachel Dunn", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "COM 320", "course_name": "Organizational Communication", "professor": "Prof. Jordan Bell", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "COM 350", "course_name": "Digital Media Production", "professor": "Prof. Avery Long", "credit_hours": 4, "Year": "Senior"}
+]
+
+computer_science_classes = [
+    {"course_code": "CS 110", "course_name": "Introduction to Programming", "professor": "Prof. Isaac Flores", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "CS 220", "course_name": "Data Structures", "professor": "Prof. Chloe Bennett", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "CS 230", "course_name": "Computer Organization", "professor": "Prof. Noah Perry", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "CS 310", "course_name": "Algorithms", "professor": "Prof. Emma Stewart", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "CS 340", "course_name": "Database Systems", "professor": "Prof. Lucas Rivera", "credit_hours": 4, "Year": "Senior"}
+]
+
+criminal_justice_classes = [
+    {"course_code": "CRJ 101", "course_name": "Introduction to Criminal Justice", "professor": "Prof. Caleb Morris", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "CRJ 210", "course_name": "Criminology", "professor": "Prof. Hailey Ross", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "CRJ 230", "course_name": "Policing in America", "professor": "Prof. Brandon Cook", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "CRJ 320", "course_name": "Corrections", "professor": "Prof. Sydney Morgan", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "CRJ 410", "course_name": "Criminal Law", "professor": "Prof. Adrian Hayes", "credit_hours": 4, "Year": "Senior"}
+]
+
+cybersecurity_classes = [
+    {"course_code": "CYB 210", "course_name": "Introduction to Cybersecurity", "professor": "Prof. Ethan Clark", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "CYB 220", "course_name": "Network Security", "professor": "Prof. Maya Peterson", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "CYB 310", "course_name": "Ethical Hacking", "professor": "Prof. Jason Reed", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "CYB 320", "course_name": "Digital Forensics", "professor": "Prof. Natalie Gray", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "CYB 410", "course_name": "Security Operations", "professor": "Prof. Owen King", "credit_hours": 4, "Year": "Senior"}
+]
+
+economics_classes = [
+    {"course_code": "ECO 201", "course_name": "Microeconomics", "professor": "Prof. Nina Wallace", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "ECO 202", "course_name": "Macroeconomics", "professor": "Prof. Peter Lang", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "ECO 310", "course_name": "Intermediate Microeconomics", "professor": "Prof. Grace Hart", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "ECO 311", "course_name": "Intermediate Macroeconomics", "professor": "Prof. Simon West", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "ECO 420", "course_name": "Econometrics", "professor": "Prof. Leah Ford", "credit_hours": 4, "Year": "Senior"}
+]
+
+education_classes = [
+    {"course_code": "EDU 200", "course_name": "Foundations of Education", "professor": "Prof. Amber Fisher", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "EDU 240", "course_name": "Educational Psychology", "professor": "Prof. Blake Turner", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "EDU 300", "course_name": "Classroom Management", "professor": "Prof. Caitlin Ward", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "EDU 330", "course_name": "Assessment and Instruction", "professor": "Prof. Devin Brooks", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "EDU 410", "course_name": "Student Teaching Seminar", "professor": "Prof. Emily Scott", "credit_hours": 4, "Year": "Senior"}
+]
+
+english_classes = [
+    {"course_code": "ENG 101", "course_name": "English Composition I", "professor": "Prof. William Young", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "ENG 102", "course_name": "English Composition II", "professor": "Prof. Hannah Webb", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "ENG 220", "course_name": "Introduction to Literature", "professor": "Prof. Colin Hayes", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "ENG 320", "course_name": "American Literature", "professor": "Prof. Maria Diaz", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "ENG 410", "course_name": "Advanced Writing", "professor": "Prof. Sarah Cole", "credit_hours": 4, "Year": "Senior"}
+]
+
+exercise_science_classes = [
+    {"course_code": "EXS 101", "course_name": "Introduction to Exercise Science", "professor": "Prof. Ryan Foster", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "EXS 220", "course_name": "Kinesiology", "professor": "Prof. Lauren Price", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "EXS 230", "course_name": "Exercise Physiology", "professor": "Prof. Gavin Hill", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "EXS 320", "course_name": "Biomechanics", "professor": "Prof. Zoe Turner", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "EXS 410", "course_name": "Strength and Conditioning", "professor": "Prof. Connor White", "credit_hours": 4, "Year": "Senior"}
+]
+
+general_studies_classes = [
+    {"course_code": "ENG 101", "course_name": "English Composition I", "professor": "Prof. William Young", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "MAT 103", "course_name": "College Algebra", "professor": "Prof. Linda Cooper", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "BIO 100", "course_name": "General Biology", "professor": "Prof. Karen Mills", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "HIS 201", "course_name": "U.S. History", "professor": "Prof. Daniel Ross", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "PSY 101", "course_name": "Introduction to Psychology", "professor": "Prof. Anna Bell", "credit_hours": 4, "Year": "Senior"}
+]
+
+management_classes = [
+    {"course_code": "MGT 301", "course_name": "Principles of Management", "professor": "Prof. Lauren Hayes", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "MGT 320", "course_name": "Organizational Behavior", "professor": "Prof. Jacob Lewis", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "MGT 330", "course_name": "Human Resource Management", "professor": "Prof. Priya Shah", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "MGT 410", "course_name": "Operations Management", "professor": "Prof. Marcus Lane", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "MGT 420", "course_name": "Strategic Management", "professor": "Prof. Olivia Hart", "credit_hours": 4, "Year": "Senior"}
+]
+
+marine_science_classes = [
+    {"course_code": "MSC 101", "course_name": "Introduction to Marine Science", "professor": "Prof. Elijah Moore", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "MSC 220", "course_name": "Oceanography", "professor": "Prof. Chloe Bennett", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "MSC 240", "course_name": "Marine Ecology", "professor": "Prof. Lucas Dean", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "MSC 320", "course_name": "Marine Conservation", "professor": "Prof. Mia Sanders", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "MSC 410", "course_name": "Coastal Processes", "professor": "Prof. Ryan Blake", "credit_hours": 4, "Year": "Senior"}
+]
+
+marketing_classes = [
+    {"course_code": "MKT 301", "course_name": "Principles of Marketing", "professor": "Prof. Derek Sullivan", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "MKT 320", "course_name": "Consumer Behavior", "professor": "Prof. Alexis Ward", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "MKT 330", "course_name": "Digital Marketing", "professor": "Prof. Colin Marsh", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "MKT 410", "course_name": "Marketing Research", "professor": "Prof. Brooke Ellis", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "MKT 420", "course_name": "Strategic Marketing", "professor": "Prof. Adam Price", "credit_hours": 4, "Year": "Senior"}
+]
+
+music_classes = [
+    {"course_code": "MUS 101", "course_name": "Music Appreciation", "professor": "Prof. Laura Bennett", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "MUS 120", "course_name": "Music Theory I", "professor": "Prof. Jason Monroe", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "MUS 121", "course_name": "Music Theory II", "professor": "Prof. Natalie Cruz", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "MUS 220", "course_name": "History of Western Music", "professor": "Prof. Ethan Keller", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "MUS 410", "course_name": "Senior Recital", "professor": "Prof. Sophia Reed", "credit_hours": 4, "Year": "Senior"}
+]
+
+nursing_classes = [
+    {"course_code": "NUR 201", "course_name": "Foundations of Nursing", "professor": "Prof. Julia Myers", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "NUR 220", "course_name": "Health Assessment", "professor": "Prof. Daniel Kim", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "NUR 301", "course_name": "Adult Health Nursing", "professor": "Prof. Rebecca Sloan", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "NUR 320", "course_name": "Pharmacology", "professor": "Prof. Nathan Cole", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "NUR 410", "course_name": "Community Health Nursing", "professor": "Prof. Olivia Marsh", "credit_hours": 4, "Year": "Senior"}
+]
+
+philosophy_classes = [
+    {"course_code": "PHI 101", "course_name": "Introduction to Philosophy", "professor": "Prof. Grant Lawson", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "PHI 210", "course_name": "Ethics", "professor": "Prof. Amber Pierce", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "PHI 220", "course_name": "Logic", "professor": "Prof. Derek Blake", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "PHI 320", "course_name": "Political Philosophy", "professor": "Prof. Hannah Reid", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "PHI 410", "course_name": "Philosophy of Mind", "professor": "Prof. Victor Young", "credit_hours": 4, "Year": "Senior"}
+]
+
+political_science_classes = [
+    {"course_code": "POL 101", "course_name": "Introduction to Political Science", "professor": "Prof. Thomas Green", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "POL 220", "course_name": "American Government", "professor": "Prof. Melissa Cole", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "POL 230", "course_name": "International Relations", "professor": "Prof. Kevin Stone", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "POL 320", "course_name": "Comparative Politics", "professor": "Prof. Rachel Hayes", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "POL 410", "course_name": "Public Policy", "professor": "Prof. Brian Scott", "credit_hours": 4, "Year": "Senior"}
+]
+
+psychology_classes = [
+    {"course_code": "PSY 101", "course_name": "Introduction to Psychology", "professor": "Prof. Anna Bell", "credit_hours": 3, "Year": "Freshman"},
+    {"course_code": "PSY 220", "course_name": "Developmental Psychology", "professor": "Prof. Dylan Hunter", "credit_hours": 3, "Year": "Sophomore"},
+    {"course_code": "PSY 230", "course_name": "Abnormal Psychology", "professor": "Prof. Megan Fox", "credit_hours": 3, "Year": "Junior"},
+    {"course_code": "PSY 310", "course_name": "Cognitive Psychology", "professor": "Prof. Isaac Reed", "credit_hours": 4, "Year": "Senior"},
+    {"course_code": "PSY 340", "course_name": "Research Methods in Psychology", "professor": "Prof. Claire Wood", "credit_hours": 4, "Year": "Senior"}
+]
+
 '''
 To print accounting classes only with Freshman year, we would do:
 for course in accounting_classes:
@@ -124,6 +234,3 @@ for course in accounting_classes:
         print(course["course_name"])
 
 '''
-
-
-
