@@ -243,5 +243,3 @@ if course["Year"] == "Freshman":
             print(course["course_name"])
             if course["Year"] == "Senior":
                 print(course["course_name"])
-
-print("test")
