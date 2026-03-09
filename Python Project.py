@@ -234,3 +234,12 @@ for course in accounting_classes:
         print(course["course_name"])
 
 '''
+Year = input("Enter the year of student you are: ")
+if course["Year"] == "Freshman":
+    print(course["course_name"])
+    if course["Year"] == "Sophomore":
+        print(course["course_name"])
+        if course["Year"] == "Junior":
+            print(course["course_name"])
+            if course["Year"] == "Senior":
+                print(course["course_name"])
