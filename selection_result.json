@@ -1,0 +1,25 @@
+{
+  "student": {
+    "name": "LIam",
+    "major": "art",
+    "year": 1,
+    "semester": "fall",
+    "completed_courses": []
+  },
+  "selected_courses": [
+    {
+      "code": "ART103",
+      "title": "3D Art Foundations",
+      "credit_hours": 3
+    },
+    {
+      "code": "ART102",
+      "title": "2D Art Foundations",
+      "credit_hours": 3
+    }
+  ],
+  "total_credits": 6,
+  "max_credits": 18,
+  "status": "Available",
+  "issues": []
+}
