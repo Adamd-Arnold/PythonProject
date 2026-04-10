@@ -11,6 +11,21 @@ student_major = ""
 major_names = ["Accounting", "Aviation", "Biology", "Business", "Communication", "Computer Science", "Criminal Justice", "Cybersecurity", "Economics", "Education", "Engineering", "English", "Exercise Science", "Finance", "General Studies", "Management", "Marine Science", "Marketing", "Music", "Nursing", "Philosophy", "Political Science", "Psychology"]
 course_code = ""
 completed_courses = []
+selected_courses = []
+
+
+def year_rank(year):
+    if year == "Rising Freshman":
+        return 0
+    if year == "Freshman":
+        return 1
+    if year == "Sophomore":
+        return 2
+    if year == "Junior":
+        return 3
+    if year == "Senior":
+        return 4
+    return -1
 
 
 def export_selected_classes(selected_courses, completed_courses): #Text file of selected classes
@@ -51,16 +66,18 @@ def set_student_info():  # Gets student year + major
     global student_year
     global student_major
     print("\n --- Enter your info ---\n")
-    student_year = input("\n-> What year are you in? [Type Rising Freshman, Freshman, Sophmore, Junior, or Senior]: ")
-    student_major = input("\n-> What's your major? (Enter the corresponding #, type ? for list of majors): ")
+    student_year = input("\n-> What year are you in? [Type Rising Freshman, Freshman, Sophmore, Junior, or Senior]: ").strip().title()
+    if student_year == "Sophmore":
+        student_year = "Sophomore"
+    student_major = input("\n-> What's your major? (Enter the corresponding #, type ? for list of majors): ").strip()
     if student_major == "?":
         print_majors()
-        student_major = int(input("\n -> What's your major? (Enter the corresponding #, type ? for list of courses): ")) # Add input validation
+        student_major = input("\n -> What's your major? (Enter the corresponding #, type ? for list of courses): ").strip() # Add input validation
             
 
 def print_course(course_dict): # Prints a received course object
-    print(f"Course: {course_dict["course_name"]}, {course_dict["course_code"]}") # Prints course name and code
-    print(f"Taught by: {course_dict["professor"]}, worth {course_dict["credit_hours"]} credit hours. \n") # Prints professor and credit hours
+    print(f"Course: {course_dict['course_name']}, {course_dict['course_code']}") # Prints course name and code
+    print(f"Taught by: {course_dict['professor']}, worth {course_dict['credit_hours']} credit hours. \n") # Prints professor and credit hours
 
 def courses_by_year(course_dict): # Finds the classes corresponding with the student's year and major
     global student_year
@@ -369,42 +386,59 @@ Do you want to:
 (Type 1 - 5, * to stop.) 
 """
 
-menu_opt = int(input(classes_menu))
+menu_opt = input(classes_menu).strip()
 
 while menu_opt != "*":
-    if menu_opt == 1:
+    if menu_opt == "1":
         print("\n --- Printing your courses this year --- \n")
         # This prints the classes for students by major and year, cycling through the courses for the major and checking the year of the course against the student's year. 
         selected_courses = []
         for course in all_courses_index[int(student_major)]: # This will print all the courses for the user major and year.
-            courses_by_year(course)
-        menu_opt = int(input(classes_menu))
-    elif menu_opt == 2: # This is seeing all the courses for the major
+            if course["Year"] == student_year:
+                selected_courses.append(course)
+                print_course(course)
+        if not selected_courses:
+            print("No courses found for your current year.\n")
+        menu_opt = input(classes_menu).strip()
+    elif menu_opt == "2": # This is seeing all the courses for the major
         print("\n --- Printing your major's courses --- \n")
         selected_courses = list(all_courses_index[int(student_major)])
         for course in all_courses_index[int(student_major)]: # This will print all the courses for the user major and year.
             courses_by_major(course)
-        menu_opt = int(input(classes_menu))
-    elif menu_opt == 3: # Prints ALL of the courses
+        menu_opt = input(classes_menu).strip()
+    elif menu_opt == "3": # Prints ALL of the courses
         print("\n --- Printing all courses --- \n")
-        for i in range(0, 21):
+        for i in range(0, len(all_courses_index)):
             for course in all_courses_index[i]:
                 print_course(course)
-        menu_opt = int(input(classes_menu))
-    elif menu_opt == 4: #Log your completed courses
+        menu_opt = input(classes_menu).strip()
+    elif menu_opt == "4": #Log your completed courses
             print("\n --- This is for logging all completed courses. --- \n")
-            print("\n --- Printing your major's courses --- \n")
-            for course in all_courses_index[int(student_major)]: # This will print all the courses for the user major and year.
-                courses_by_major(course)
+            print("\n --- Printing your eligible completed courses --- \n")
+            eligible_courses = []
+            for course in all_courses_index[int(student_major)]:
+                if year_rank(course["Year"]) <= year_rank(student_year):
+                    eligible_courses.append(course)
+                    print_course(course)
             print("\n")
+            course_code = ""
             while course_code != "*":
-                course_code = input("---> Type the course code (etc, PHIL 402), * to quit: ")
-                for course in all_courses_index[int(student_major)]: # This will print all the FUTURE courses for the user major and year.
-                    if course["course_code"] == str(course_code): 
-                        print_course(course)
-                        completed_courses.append(course) 
-            menu_opt = int(input(classes_menu))
-    elif menu_opt == 5:
+                course_code = input("---> Type the course code (etc, PHIL 402), * to quit: ").strip().upper()
+                if course_code == "*":
+                    break
+                found_match = False
+                for course in eligible_courses:
+                    if course["course_code"].upper() == course_code:
+                        found_match = True
+                        if course not in completed_courses:
+                            print_course(course)
+                            completed_courses.append(course)
+                        else:
+                            print("That course is already saved as completed.\n")
+                if not found_match:
+                    print("Course code not found in eligible courses for your year.\n")
+            menu_opt = input(classes_menu).strip()
+    elif menu_opt == "5":
         print("\n --- Printing future courses --- \n")
         selected_courses = []
         for course in all_courses_index[int(student_major)]: # This will print all the FUTURE courses for the user major and year.
@@ -413,13 +447,19 @@ while menu_opt != "*":
                     selected_courses.append(course)
                 elif student_year == "Freshman" and course["Year"] in ["Sophomore", "Junior", "Senior"]:
                     selected_courses.append(course)
-                elif student_year == "Sophmore" and course["Year"] in ["Junior", "Senior"]:
+                elif student_year == "Sophomore" and course["Year"] in ["Junior", "Senior"]:
                     selected_courses.append(course)
                 elif student_year == "Junior" and course["Year"] == "Senior":
                     selected_courses.append(course)
         if student_year == "Senior":
             print("\n-> Finish up your current classes, then you're done! You got this! \n")
         export_selected_classes(selected_courses, completed_courses) 
-        menu_opt = int(input(classes_menu))
+        menu_opt = input(classes_menu).strip()
+    else:
+        print("Please choose 1-5 or * to stop.\n")
+        menu_opt = input(classes_menu).strip()
+
+export_selected_classes(selected_courses, completed_courses)
+print("\nThanks for using the course planner. Goodbye!\n")
         
        
