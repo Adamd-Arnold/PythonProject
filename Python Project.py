@@ -41,8 +41,8 @@ def set_student_info():  # Gets student year + major
             
 
 def print_course(course_dict): # Prints a received course object
-    print(f"Course: {course_dict["course_name"]}, {course_dict["course_code"]}") # Prints course name and code
-    print(f"Taught by: {course_dict["professor"]}, worth {course_dict["credit_hours"]} credit hours. \n") # Prints professor and credit hours
+    print(f"Course: {course_dict['course_name']}, {course_dict['course_code']}") # Prints course name and code
+    print(f"Taught by: {course_dict['professor']}, worth {course_dict['credit_hours']} credit hours. \n") # Prints professor and credit hours
 
 def courses_by_year(course_dict): # Finds the classes corresponding with the student's year and major
     global student_year
@@ -75,8 +75,8 @@ def log_completed(course_dict):
      pass
 ''' !!! '''
 def log_course(course_dict): # Prints and writes to a file a received course object
-    print(f"Course: {course_dict["course_name"]}, {course_dict["course_code"]}") # Prints course name and code
-    print(f"Taught by: {course_dict["professor"]}, worth {course_dict["credit_hours"]} credit hours. \n") # Prints professor and credit hours       
+    print(f"Course: {course_dict['course_name']}, {course_dict['course_code']}") # Prints course name and code
+    print(f"Taught by: {course_dict['professor']}, worth {course_dict['credit_hours']} credit hours. \n") # Prints professor and credit hours       
 # Now write this info to a file with student info
 ''' !!! '''
 def future_courses(course_dict):

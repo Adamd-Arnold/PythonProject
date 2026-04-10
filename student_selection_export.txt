@@ -1,0 +1,7 @@
+Student Class Selection Export
+================================
+Year: Freshman
+Major: 0
+
+Selected Courses:
+- ACC 201: Financial Accounting (Freshman, 3 credits)
