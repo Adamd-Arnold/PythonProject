@@ -33,11 +33,23 @@ def set_student_info():  # Gets student year + major
     global student_year
     global student_major
     print("\n --- Enter your info ---\n")
-    student_year = input("\n-> What year are you in? [Type Rising Freshman, Freshman, Sophmore, Junior, or Senior]: ")
-    student_major = input("\n-> What's your major? (Enter the corresponding #, type ? for list of courses): ")
-    if student_major == "?":
-        print_majors()
-        student_major = int(input("\n -> What's your major? (Enter the corresponding #, type ? for list of courses): ")) # Add input validation
+    valid_years = ["Rising Freshman", "Freshman", "Sophomore", "Junior", "Senior"]
+    while True:
+        student_year = input("\n-> What year are you in? [Type Rising Freshman, Freshman, Sophmore, Junior, or Senior]: ").strip()
+        if student_year.lower() == "sophmore":
+            student_year = "Sophomore"
+        if student_year in valid_years:
+            break
+        print("\n-> Invalid year. Please enter Rising Freshman, Freshman, Sophmore/Sophomore, Junior, or Senior.")
+
+    while True:
+        student_major = input("\n-> What's your major? (Enter the corresponding #, type ? for list of courses): ").strip()
+        if student_major == "?":
+            print_majors()
+            continue
+        if student_major.isdigit() and 0 <= int(student_major) <= 22:
+            break
+        print("\n-> Invalid major. Enter a number from 0 to 22, or type ? for the list.")
             
 
 def print_course(course_dict): # Prints a received course object
@@ -91,7 +103,7 @@ def future_courses(course_dict):
             log_course(course_dict)
         if course_dict["Year"] == "Senior":
             log_course(course_dict)
-    elif student_year == "Sophmore":
+    elif student_year == "Sophomore":
         if course_dict["Year"] == "Junior":
             log_course(course_dict)
         if course_dict["Year"] == "Senior":
@@ -361,10 +373,15 @@ Do you want to:
 3.) View course catalogue
 4.) Log your completed courses !!! needs work
 5.) View future courses !!! needs work
-(Type 1, 2, or 3) 
+(Type 1, 2, 3, 4, or 5) 
 """
 
-menu_opt = int(input(classes_menu))
+while True:
+    menu_input = input(classes_menu).strip()
+    if menu_input.isdigit() and int(menu_input) in [1, 2, 3, 4, 5]:
+        menu_opt = int(menu_input)
+        break
+    print("\n-> Invalid menu option. Please enter 1, 2, 3, 4, or 5.")
 run_menu = True
 
 # Find a way to loop this
@@ -376,41 +393,44 @@ if menu_opt == 1:
         courses_by_year(course)
     export_selected_classes(selected_courses)
 elif menu_opt == 2: # This is seeing all the courses for the major
-        print("\n --- Printing your major's courses --- \n")
-        selected_courses = list(all_courses_index[int(student_major)])
-        for course in all_courses_index[int(student_major)]: # This will print all the courses for the user major and year.
-            courses_by_major(course)
-        export_selected_classes(selected_courses)
+    print("\n --- Printing your major's courses --- \n")
+    selected_courses = list(all_courses_index[int(student_major)])
+    for course in all_courses_index[int(student_major)]: # This will print all the courses for the user major and year.
+        courses_by_major(course)
+    export_selected_classes(selected_courses)
 elif menu_opt == 3: # Prints ALL of the courses
-        print("\n --- Printing all courses --- \n")
-        for i in range(0, 21):
-            for course in all_courses_index[i]:
-                print_course(course)
+    print("\n --- Printing all courses --- \n")
+    selected_courses = []
+    for i in range(0, len(all_courses_index)):
+        for course in all_courses_index[i]:
+            print_course(course)
+            selected_courses.append(course)
+    export_selected_classes(selected_courses)
 elif menu_opt == 4: #Log your completed courses
-        '''
-        !!! 
+    '''
+    !!! 
     This section will write to a file the classes the student has taken (by input of course code, ex: PHIL 402, and in menu
     option #5 (Planning) 
-        '''
-        pass
+    '''
+    pass
 elif menu_opt == 5:
-        print("\n --- Printing future courses --- \n")
-        selected_courses = []
-        for course in all_courses_index[int(student_major)]: # This will print all the FUTURE courses for the user major and year.
-            if student_year == "Rising Freshman":
-                selected_courses.append(course)
-            elif student_year == "Freshman" and course["Year"] in ["Sophomore", "Junior", "Senior"]:
-                selected_courses.append(course)
-            elif student_year == "Sophmore" and course["Year"] in ["Junior", "Senior"]:
-                selected_courses.append(course)
-            elif student_year == "Junior" and course["Year"] == "Senior":
-                selected_courses.append(course)
-            future_courses(course) # !!! currently prints courses completed by year, does not log nor remove manually completed ones
-        if student_year == "Senior":
-            print("\n-> Finish up your current classes, then you're done! You got this! \n")
-        export_selected_classes(selected_courses)
-        '''
-        !!!!!!
+    print("\n --- Printing future courses --- \n")
+    selected_courses = []
+    for course in all_courses_index[int(student_major)]: # This will print all the FUTURE courses for the user major and year.
+        if student_year == "Rising Freshman":
+            selected_courses.append(course)
+        elif student_year == "Freshman" and course["Year"] in ["Sophomore", "Junior", "Senior"]:
+            selected_courses.append(course)
+        elif student_year == "Sophomore" and course["Year"] in ["Junior", "Senior"]:
+            selected_courses.append(course)
+        elif student_year == "Junior" and course["Year"] == "Senior":
+            selected_courses.append(course)
+        future_courses(course) # !!! currently prints courses completed by year, does not log nor remove manually completed ones
+    if student_year == "Senior":
+        print("\n-> Finish up your current classes, then you're done! You got this! \n")
+    export_selected_classes(selected_courses)
+    '''
+    !!!!!!
     This will read a file (if it exists) from #4, use a new function filter_courses() to remove the already completed courses from the schdule
     and print the rest as to be scheduled, and minus the earlier ones 
     - (for example, a Sophmore will automatically have Freshman level classes in Completed.)
@@ -418,8 +438,8 @@ elif menu_opt == 5:
     -prints completed claseses with opposite logic
     '''
 elif menu_opt == "*": # exit the menu
-        print("Thank you!")
-        run_menu = False
+    print("Thank you!")
+    run_menu = False
         
 
 
