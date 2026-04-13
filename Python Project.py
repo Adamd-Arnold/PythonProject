@@ -160,6 +160,7 @@ def print_majors():
     
 ######This is the list of tuples for classes in the course catalogue. It has the dictionary for each class with the pointers to the course code and course name from the above indexes, w/ Professor, credit hours, and year offered.
 
+course =
 
 aviation_classes = [
     {"course_code": "AVI 101", "course_name": "Introduction to Aviation", "professor": "Prof. James Carter", "credit_hours": 3, "Year": "Freshman"},
@@ -341,6 +342,7 @@ psychology_classes = [
     {"course_code": "PSY 310", "course_name": "Cognitive Psychology", "professor": "Prof. Isaac Reed", "credit_hours": 4, "Year": "Senior"},
     {"course_code": "PSY 340", "course_name": "Research Methods in Psychology", "professor": "Prof. Claire Wood", "credit_hours": 4, "Year": "Senior"}
 ]
+
 
 # Indexs to print courses by major and year. This will be used in the if statements to print courses by major and year.
 accounting_classes_index = list(accounting_classes) # Index for accounting classes
