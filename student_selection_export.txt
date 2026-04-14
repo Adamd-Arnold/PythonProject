@@ -1,13 +1,6 @@
-Student Class Selection Export
-================================
-Year: Freshman
-Major: Psychology
+Year: Senior
+Major: Computer Science
 
 Future Courses:
-- PSY 101: Introduction to Psychology (Freshman, 3 credits)
-- PSY 220: Developmental Psychology (Sophomore, 3 credits)
-- PSY 230: Abnormal Psychology (Junior, 3 credits)
-- PSY 310: Cognitive Psychology (Senior, 4 credits)
-- PSY 340: Research Methods in Psychology (Senior, 4 credits)
+
 Completed Courses:
-- No other courses completed.
