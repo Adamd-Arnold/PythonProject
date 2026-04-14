@@ -256,6 +256,7 @@ while choice != "*":
     choice = input(menu).strip()
 
 
-# END 
-export_selected_classes(selected_courses, completed_courses)
+# END
+# Do not export again on exit: option 5 already exports future courses,
+# and exporting here can overwrite that file with a non-future selection.
 print("\nGoodbye!\n")
