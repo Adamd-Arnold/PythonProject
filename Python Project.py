@@ -1,4 +1,5 @@
 from course_list import COURSE_CATALOG
+import os
 
 student_year = ""
 student_major = ""
@@ -34,7 +35,8 @@ def print_course(course):
 
 
 def export_selected_classes(selected_courses, completed_courses):
-    file_name = "student_selection_export.txt"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_name = os.path.join(script_dir, "student_selection_export.txt")
 
     with open(file_name, "w", encoding="utf-8") as f:
         f.write(f"Year: {student_year}\n")
@@ -86,6 +88,14 @@ def print_majors():
 
 courses = {
    
+    "Accounting": [
+        {"code": "ACC 201", "name": "Financial Accounting", "prof": "Michael Grant", "credits": 3, "year": "Freshman"},
+        {"code": "ACC 202", "name": "Managerial Accounting", "prof": "Lauren Hayes", "credits": 3, "year": "Sophomore"},
+        {"code": "ACC 310", "name": "Intermediate Accounting I", "prof": "Trevor Adams", "credits": 3, "year": "Junior"},
+        {"code": "ACC 311", "name": "Intermediate Accounting II", "prof": "Diana Brooks", "credits": 4, "year": "Senior"},
+        {"code": "ACC 420", "name": "Auditing", "prof": "Henry Collins", "credits": 4, "year": "Senior"},
+    ],
+
     "Aviation": [
         {"code": "AVI 101", "name": "Introduction to Aviation", "prof": "James Carter", "credits": 3, "year": "Freshman"},
         {"code": "AVI 120", "name": "Private Pilot Ground School", "prof": "Elena Brooks", "credits": 3, "year": "Sophomore"},
@@ -110,27 +120,12 @@ courses = {
         {"code": "FIN 320", "name": "Corporate Finance", "prof": "Olivia Turner", "credits": 4, "year": "Senior"},
     ],
 
-    "Engineering": [
-        {"code": "ENG 101", "name": "Introduction to Engineering", "prof": "David Wright", "credits": 3, "year": "Freshman"},
-        {"code": "ENG 201", "name": "Engineering Graphics", "prof": "Jennifer Lopez", "credits": 3, "year": "Sophomore"},
-        {"code": "ENG 301", "name": "Thermodynamics", "prof": "Robert Hill", "credits": 4, "year": "Junior"},
-        {"code": "ENG 401", "name": "Capstone Design Project", "prof": "Amanda Scott", "credits": 4, "year": "Senior"},
-    ],
-
-    "Finance": [
-        {"code": "FIN 301", "name": "Principles of Finance", "prof": "Olivia Turner", "credits": 3, "year": "Junior"},
-        {"code": "FIN 320", "name": "Corporate Finance", "prof": "Olivia Turner", "credits": 4, "year": "Senior"},
-        {"code": "FIN 330", "name": "Investments", "prof": "Ethan Baker", "credits": 4, "year": "Senior"},
-        {"code": "FIN 410", "name": "Financial Markets", "prof": "Sophia Wilson", "credits": 4, "year": "Senior"},
-        {"code": "FIN 420", "name": "International Finance", "prof": "Liam Davis", "credits": 4, "year": "Senior"},
-    ],
-
-    "Accounting": [
-        {"code": "ACC 201", "name": "Financial Accounting", "prof": "Michael Grant", "credits": 3, "year": "Freshman"},
-        {"code": "ACC 202", "name": "Managerial Accounting", "prof": "Lauren Hayes", "credits": 3, "year": "Sophomore"},
-        {"code": "ACC 310", "name": "Intermediate Accounting I", "prof": "Trevor Adams", "credits": 3, "year": "Junior"},
-        {"code": "ACC 311", "name": "Intermediate Accounting II", "prof": "Diana Brooks", "credits": 4, "year": "Senior"},
-        {"code": "ACC 420", "name": "Auditing", "prof": "Henry Collins", "credits": 4, "year": "Senior"},
+    "Communication": [
+        {"code": "COM 101", "name": "Public Speaking", "prof": "Patricia White", "credits": 3, "year": "Freshman"},
+        {"code": "COM 210", "name": "Interpersonal Communication", "prof": "James Martinez", "credits": 3, "year": "Sophomore"},
+        {"code": "COM 230", "name": "Mass Media and Society", "prof": "Sarah Johnson", "credits": 3, "year": "Junior"},
+        {"code": "COM 320", "name": "Organizational Communication", "prof": "Michael Chen", "credits": 4, "year": "Senior"},
+        {"code": "COM 350", "name": "Digital Media Production", "prof": "Lisa Anderson", "credits": 4, "year": "Senior"},
     ],
 
     "Computer Science": [
@@ -141,12 +136,132 @@ courses = {
         {"code": "CS 340", "name": "Database Systems", "prof": "Lucas Rivera", "credits": 4, "year": "Senior"},
     ],
 
+    "Criminal Justice": [
+        {"code": "CRJ 101", "name": "Introduction to Criminal Justice", "prof": "David Morgan", "credits": 3, "year": "Freshman"},
+        {"code": "CRJ 210", "name": "Criminology", "prof": "Angela Rodriguez", "credits": 3, "year": "Sophomore"},
+        {"code": "CRJ 230", "name": "Policing in America", "prof": "Kevin Harris", "credits": 3, "year": "Junior"},
+        {"code": "CRJ 320", "name": "Corrections", "prof": "Jennifer Lee", "credits": 4, "year": "Senior"},
+        {"code": "CRJ 410", "name": "Criminal Law", "prof": "Robert Taylor", "credits": 4, "year": "Senior"},
+    ],
+
     "Cybersecurity": [
         {"code": "CYB 210", "name": "Introduction to Cybersecurity", "prof": "Ethan Clark", "credits": 3, "year": "Freshman"},
         {"code": "CYB 220", "name": "Network Security", "prof": "Maya Peterson", "credits": 3, "year": "Sophomore"},
         {"code": "CYB 310", "name": "Ethical Hacking", "prof": "Jason Reed", "credits": 3, "year": "Junior"},
         {"code": "CYB 320", "name": "Digital Forensics", "prof": "Natalie Gray", "credits": 4, "year": "Senior"},
         {"code": "CYB 410", "name": "Security Operations", "prof": "Owen King", "credits": 4, "year": "Senior"},
+    ],
+
+    "Economics": [
+        {"code": "ECO 201", "name": "Microeconomics", "prof": "Nina Wallace", "credits": 3, "year": "Freshman"},
+        {"code": "ECO 202", "name": "Macroeconomics", "prof": "Thomas Brown", "credits": 3, "year": "Sophomore"},
+        {"code": "ECO 310", "name": "Intermediate Microeconomics", "prof": "Victoria Price", "credits": 3, "year": "Junior"},
+        {"code": "ECO 311", "name": "Intermediate Macroeconomics", "prof": "Christopher Scott", "credits": 4, "year": "Senior"},
+        {"code": "ECO 420", "name": "Econometrics", "prof": "Daniel West", "credits": 4, "year": "Senior"},
+    ],
+
+    "Education": [
+        {"code": "EDU 200", "name": "Foundations of Education", "prof": "Mary Thompson", "credits": 3, "year": "Freshman"},
+        {"code": "EDU 240", "name": "Educational Psychology", "prof": "Paul Garcia", "credits": 3, "year": "Sophomore"},
+        {"code": "EDU 300", "name": "Classroom Management", "prof": "Susan Martinez", "credits": 3, "year": "Junior"},
+        {"code": "EDU 330", "name": "Assessment and Instruction", "prof": "Karen Davis", "credits": 4, "year": "Senior"},
+        {"code": "EDU 410", "name": "Student Teaching Seminar", "prof": "John Wilson", "credits": 4, "year": "Senior"},
+    ],
+
+    "Engineering": [
+        {"code": "ENGR 101", "name": "Introduction to Engineering", "prof": "David Wright", "credits": 3, "year": "Freshman"},
+        {"code": "ENGR 201", "name": "Statics", "prof": "Jennifer Lopez", "credits": 3, "year": "Sophomore"},
+        {"code": "ENGR 220", "name": "Dynamics", "prof": "Robert Hill", "credits": 4, "year": "Junior"},
+        {"code": "ENGR 250", "name": "Thermodynamics", "prof": "Amanda Scott", "credits": 4, "year": "Junior"},
+        {"code": "ENGR 310", "name": "Circuits", "prof": "Marcus Hall", "credits": 4, "year": "Senior"},
+    ],
+
+    "English": [
+        {"code": "ENG 101", "name": "English Composition I", "prof": "Rebecca Foster", "credits": 3, "year": "Freshman"},
+        {"code": "ENG 102", "name": "English Composition II", "prof": "Catherine Grant", "credits": 3, "year": "Sophomore"},
+        {"code": "ENG 220", "name": "Introduction to Literature", "prof": "Edward Moore", "credits": 3, "year": "Junior"},
+        {"code": "ENG 320", "name": "American Literature", "prof": "Margaret Clark", "credits": 4, "year": "Senior"},
+        {"code": "ENG 410", "name": "Advanced Writing", "prof": "James Robinson", "credits": 4, "year": "Senior"},
+    ],
+
+    "Exercise Science": [
+        {"code": "EXS 101", "name": "Introduction to Exercise Science", "prof": "Stephen Lewis", "credits": 3, "year": "Freshman"},
+        {"code": "EXS 220", "name": "Kinesiology", "prof": "Michelle Walker", "credits": 3, "year": "Sophomore"},
+        {"code": "EXS 230", "name": "Exercise Physiology", "prof": "Brandon Young", "credits": 3, "year": "Junior"},
+        {"code": "EXS 320", "name": "Biomechanics", "prof": "Jessica King", "credits": 4, "year": "Senior"},
+        {"code": "EXS 410", "name": "Strength and Conditioning", "prof": "Andrew Wright", "credits": 4, "year": "Senior"},
+    ],
+
+    "Finance": [
+        {"code": "FIN 301", "name": "Principles of Finance", "prof": "Olivia Turner", "credits": 3, "year": "Junior"},
+        {"code": "FIN 320", "name": "Corporate Finance", "prof": "Olivia Turner", "credits": 4, "year": "Senior"},
+        {"code": "FIN 330", "name": "Investments", "prof": "Ethan Baker", "credits": 4, "year": "Senior"},
+        {"code": "FIN 410", "name": "Financial Markets", "prof": "Sophia Wilson", "credits": 4, "year": "Senior"},
+        {"code": "FIN 420", "name": "International Finance", "prof": "Liam Davis", "credits": 4, "year": "Senior"},
+    ],
+
+    "General Studies": [
+        {"code": "ENG 101", "name": "English Composition I", "prof": "Rebecca Foster", "credits": 3, "year": "Freshman"},
+        {"code": "MAT 103", "name": "College Algebra", "prof": "Harold Nelson", "credits": 3, "year": "Freshman"},
+        {"code": "BIO 100", "name": "General Biology", "prof": "Hannah Cole", "credits": 3, "year": "Freshman"},
+        {"code": "HIS 201", "name": "U.S. History", "prof": "Virginia Powell", "credits": 3, "year": "Sophomore"},
+        {"code": "PSY 101", "name": "Introduction to Psychology", "prof": "Anna Bell", "credits": 3, "year": "Freshman"},
+    ],
+
+    "Management": [
+        {"code": "MGT 301", "name": "Principles of Management", "prof": "George Foster", "credits": 3, "year": "Junior"},
+        {"code": "MGT 320", "name": "Organizational Behavior", "prof": "Christine Long", "credits": 3, "year": "Junior"},
+        {"code": "MGT 330", "name": "Human Resource Management", "prof": "Raymond Jackson", "credits": 3, "year": "Junior"},
+        {"code": "MGT 410", "name": "Operations Management", "prof": "Ruth White", "credits": 4, "year": "Senior"},
+        {"code": "MGT 420", "name": "Strategic Management", "prof": "Dennis Harris", "credits": 4, "year": "Senior"},
+    ],
+
+    "Marine Science": [
+        {"code": "MSC 101", "name": "Introduction to Marine Science", "prof": "Frank Thompson", "credits": 3, "year": "Freshman"},
+        {"code": "MSC 220", "name": "Oceanography", "prof": "Gloria Rivera", "credits": 3, "year": "Sophomore"},
+        {"code": "MSC 240", "name": "Marine Ecology", "prof": "Henry Graham", "credits": 3, "year": "Junior"},
+        {"code": "MSC 320", "name": "Marine Conservation", "prof": "Iris Murphy", "credits": 4, "year": "Senior"},
+        {"code": "MSC 410", "name": "Coastal Processes", "prof": "Jack Cooper", "credits": 4, "year": "Senior"},
+    ],
+
+    "Marketing": [
+        {"code": "MKT 301", "name": "Principles of Marketing", "prof": "Derek Sullivan", "credits": 3, "year": "Junior"},
+        {"code": "MKT 320", "name": "Consumer Behavior", "prof": "Nicole Patterson", "credits": 3, "year": "Junior"},
+        {"code": "MKT 330", "name": "Digital Marketing", "prof": "Kevin Butler", "credits": 3, "year": "Junior"},
+        {"code": "MKT 410", "name": "Marketing Research", "prof": "Laura Bennett", "credits": 4, "year": "Senior"},
+        {"code": "MKT 420", "name": "Strategic Marketing", "prof": "Martin Hughes", "credits": 4, "year": "Senior"},
+    ],
+
+    "Music": [
+        {"code": "MUS 101", "name": "Music Appreciation", "prof": "Natasha Quinn", "credits": 3, "year": "Freshman"},
+        {"code": "MUS 120", "name": "Music Theory I", "prof": "Oscar Patterson", "credits": 3, "year": "Freshman"},
+        {"code": "MUS 121", "name": "Music Theory II", "prof": "Patricia Ross", "credits": 3, "year": "Sophomore"},
+        {"code": "MUS 220", "name": "History of Western Music", "prof": "Quincy Sanders", "credits": 4, "year": "Junior"},
+        {"code": "MUS 410", "name": "Senior Recital", "prof": "Rachel Stewart", "credits": 4, "year": "Senior"},
+    ],
+
+    "Nursing": [
+        {"code": "NUR 201", "name": "Foundations of Nursing", "prof": "Susan Thompson", "credits": 3, "year": "Sophomore"},
+        {"code": "NUR 220", "name": "Health Assessment", "prof": "Victoria Morris", "credits": 3, "year": "Sophomore"},
+        {"code": "NUR 301", "name": "Adult Health Nursing", "prof": "William Rogers", "credits": 4, "year": "Junior"},
+        {"code": "NUR 320", "name": "Pharmacology", "prof": "Xenia Peterson", "credits": 3, "year": "Junior"},
+        {"code": "NUR 410", "name": "Community Health Nursing", "prof": "Yvonne Adams", "credits": 4, "year": "Senior"},
+    ],
+
+    "Philosophy": [
+        {"code": "PHI 101", "name": "Introduction to Philosophy", "prof": "Zachary Bell", "credits": 3, "year": "Freshman"},
+        {"code": "PHI 210", "name": "Ethics", "prof": "Amy Carter", "credits": 3, "year": "Sophomore"},
+        {"code": "PHI 220", "name": "Logic", "prof": "Bradley Davis", "credits": 3, "year": "Junior"},
+        {"code": "PHI 320", "name": "Political Philosophy", "prof": "Cynthia Edwards", "credits": 4, "year": "Senior"},
+        {"code": "PHI 410", "name": "Philosophy of Mind", "prof": "Daniel Fisher", "credits": 4, "year": "Senior"},
+    ],
+
+    "Political Science": [
+        {"code": "POL 101", "name": "Introduction to Political Science", "prof": "Evan Garcia", "credits": 3, "year": "Freshman"},
+        {"code": "POL 220", "name": "American Government", "prof": "Fiona Green", "credits": 3, "year": "Sophomore"},
+        {"code": "POL 230", "name": "International Relations", "prof": "Gregory Hall", "credits": 3, "year": "Junior"},
+        {"code": "POL 320", "name": "Comparative Politics", "prof": "Hannah Jackson", "credits": 4, "year": "Senior"},
+        {"code": "POL 410", "name": "Public Policy", "prof": "Isaac Kennedy", "credits": 4, "year": "Senior"},
     ],
 
     "Psychology": [
