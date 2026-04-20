@@ -1,0 +1,94 @@
+Course Selector Application Requirements (Python Class)
+Date: 2026-04-20
+
+Scope
+This document defines specific requirements that the current course selector codebase can satisfy or is intended to satisfy in a Python class project.
+
+Functional Requirements
+FR-01: Student Profile Input
+- The application shall prompt the user to enter student year and major at startup.
+- The year prompt shall display these expected labels: Rising Freshman, Freshman, Sophomore, Junior, Senior.
+- The application shall accept major selection by numeric index from a displayed major list.
+
+FR-02: Major Listing Assistance
+- If the user enters ? when asked for major number, the application shall display all available majors with numeric indexes.
+- The user shall be prompted again to enter a major number after viewing the list.
+
+FR-03: Invalid Major Fallback
+- If major input is not a valid index or is out of range, the system shall default the major to Accounting.
+- If the selected major is not found in the course dictionary, the system shall default to Accounting and continue safely.
+
+FR-04: Interactive Main Menu
+- The application shall display a repeating text menu with options 1 through 5 and * to exit.
+- The menu loop shall continue until the user enters *.
+- Invalid menu choices shall display an Invalid option message and re-prompt.
+
+FR-05: View Courses For Current Year
+- Option 1 shall list only courses in the selected major where course year equals student year.
+- Each listed course shall include course name, code, instructor, and credit hours.
+
+FR-06: View All Courses In Selected Major
+- Option 2 shall list all courses for the student major regardless of year level.
+- Each output row shall include course name, code, instructor, and credits.
+
+FR-07: View Full Multi-Major Catalog
+- Option 3 shall list all courses across all majors in the in-memory catalog.
+- The output shall include the same course detail format as other views.
+
+FR-08: Track Completed Courses
+- Option 4 shall show only eligible completed-course candidates where course year rank is less than or equal to the student year rank.
+- The system shall accept repeated user input of course code until * is entered.
+- Matching course codes shall be added to completed_courses once only (no duplicates).
+- If a valid course is entered more than once, the system shall inform the user it is already completed.
+- If an entered course code is not found in eligible courses, the system shall display Not found.
+
+FR-09: Recommend Future Courses
+- Option 5 shall list courses in the selected major where course year rank is greater than the student year rank.
+- These courses shall be stored in selected_courses for export.
+
+FR-10: Export Selection Results
+- Option 5 shall trigger export to student_selection_export.txt in the same script directory.
+- Export output shall include student year and major header values.
+- Export output shall include two sections: Future Courses and Completed Courses.
+- Each course line shall include course code, course name, and year label.
+
+FR-11: Course Year Comparison Logic
+- The application shall implement a year-rank mapping to compare academic progression.
+
+Data Requirements
+DR-01: Course Record Shape
+- Each course record shall contain: code (string), name (string), prof (string), credits (integer), year (string).
+
+DR-02: Major Catalog Structure
+- The in-memory catalog shall be a dictionary keyed by major name where each value is a list of course records.
+
+Non-Functional Requirements
+NFR-01: Console Usability
+- Prompts and menu text shall be human-readable for first-time users in a terminal environment.
+- Output formatting shall be consistent across menu options.
+
+NFR-02: Error Tolerance
+- User input errors (bad major index, invalid menu choice, invalid course code) shall not crash the application.
+- The application shall continue prompting after recoverable input errors.
+
+NFR-03: File Encoding
+- Exported text files shall be written in UTF-8 encoding.
+
+NFR-04: Relative Portability
+- The application shall resolve export path relative to the script location, not the shell working directory.
+
+NFR-05: Maintainability
+- Core behaviors (year ranking, printing, export) shall be encapsulated in reusable functions.
+
+Acceptance Test Checklist
+AT-01: Startup prompts appear for year and major and accept user input.
+AT-02: Entering ? shows numbered majors and allows selection.
+AT-03: Invalid major selection defaults to Accounting without crash.
+AT-04: Option 1 shows only current-year courses.
+AT-05: Option 2 shows all courses in selected major.
+AT-06: Option 3 shows courses from multiple majors.
+AT-07: Option 4 allows adding valid eligible completed courses and blocks duplicates.
+AT-08: Option 4 rejects invalid course codes with Not found.
+AT-09: Option 5 lists future courses and writes student_selection_export.txt.
+AT-10: Export file includes Year, Major, Future Courses, and Completed Courses sections.
+AT-11: Entering * exits cleanly with goodbye message.
