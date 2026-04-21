@@ -1,7 +1,25 @@
-""" Adam Arnold: Code structure, Function implementation.
+"""
+File: Python Project.py
+For: CS307
+Assignment: Team Project Assignment
+Authors and Contributions:
+
+Adam Arnold: Code structure, Function implementation.
 Liam Dusanic: Course data, Major list, User input handling.
 Julian McCreary: File export, Course display formatting.
-Sienis Avila: Condesning code. """
+Sienis Avila: Condensing code.
+
+Last Modified: 2026-04-21
+
+AI Usage Statement:
+AI and GPT products were reviewed as part of the development of this product to improve understanding of concepts and syntax.
+The IDE's Autocomplete [was/was not] enabled in the IDE during the development of the code and provided some assistance in clarify syntax requirements.
+AI/Generative AI products were not pasted into this file, but were used to assist in understanding, code generation, and formatting. 
+All code was reviewed and modified by the author to ensure accuracy,ownership, and relevance to the project.
+**AI was only used for creative reasons, used to come up with course names, course codes, and professor names to fill the list
+    
+"""
+
 
 from course_list import COURSE_CATALOG
 import os
