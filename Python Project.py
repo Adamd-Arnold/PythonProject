@@ -1,3 +1,8 @@
+""" Adam Arnold: Code structure, Function implementation.
+Liam Dusanic: Course data, Major list, User input handling.
+Julian McCreary: File export, Course display formatting.
+Sienis Avila: Condesning code. """
+
 from course_list import COURSE_CATALOG
 import os
 
